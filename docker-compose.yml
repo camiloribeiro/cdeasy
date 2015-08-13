@@ -3,11 +3,12 @@ jenkins:
   ports:
     - "8080:8080"
     - "50000:50000"
+  tty: true
 
 jenkinsSetup:
-  image: centos:7
+  image: java:8-jdk
   links:
     - jenkins
   volumes:
-    - docker/setup-jenkins.sh:/tmp/setup-jenkins.sh
+    - docker/setupJenkins:/tmp
   command: /tmp/setup-jenkins.sh
