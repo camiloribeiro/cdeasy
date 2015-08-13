@@ -1,17 +1,17 @@
 cdeasy - Continuous Delivery Made Easy ;D
 ========================================
-
-                    ##        .
-              ## ## ##       ==            Example of how docker and automation can help you
-           ## ## ## ##      ===            to imporove your continuous delivery process.
-       /""""""""""""""""\___/ ===
-  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   This is not a production ready framework or template
-       \______ o          __/              to start using in your current project. Please take
-         \    \        __/                 this as an inspiration to improve or implement a
-          \____\______/                    Continuous Develivey pipeline for your own needs :)
-                          <3 Docker <3
-
-
+   
+                       ##        .
+                 ## ## ##       ==            Example of how docker and automation can help you
+              ## ## ## ##      ===            to imporove your continuous delivery process.
+          /""""""""""""""""\___/ ===
+     ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   This is not a production ready framework or template
+          \______ o          __/              to start using in your current project. Please take
+            \    \        __/                 this as an inspiration to improve or implement a
+             \____\______/                    Continuous Develivey pipeline for your own needs :)
+                             <3 Docker <3
+   
+   
 Setting up the environment
 ===========================
 
