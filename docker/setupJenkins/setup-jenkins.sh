@@ -26,7 +26,7 @@ curl -X POST -d '<jenkins><install plugin="delivery-pipeline-plugin@0.9.5" /></j
 sleep 2
 
 # wait 20 sec
-sleep 20
+sleep 30
 
 # jenkins safe restart
 curl -X POST $host/safeRestart

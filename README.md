@@ -1,4 +1,4 @@
-cdeasy - Continuous Delivery Made Easy ;D
+cdeasy - Continuous Delivery Made Easy
 ========================================
    
                        ##        .
@@ -15,7 +15,7 @@ cdeasy - Continuous Delivery Made Easy ;D
 Setting up the environment
 ===========================
 
-In order to run that you only need docker, docker-compose and git in your machine. 
+Before clonning this repository you you need docker, docker-compose and git in your machine. 
 If you want to try new stuff, than a IDE of your preference could be needed. In any case, it should be able to be edited using only VIM or any other favority text editor
 
 OXS
@@ -56,6 +56,19 @@ You will also need to use docker-compose here, but I don't know a simple way to 
 In this repo, in the blog post that will follow it and in the presentations there will not have any other reference to windows environments given my lack of experience with it. Please consider using another operating system if you are not able to run the full experience at first, than please adapt it later to windows. 
 If you see any improvements that this instructions or scripts could have, please consider to pull request :) Credits will be fully given to you
 
+All the shell script used here will also not work in Windows. No Power shell will be provided in our first release :(
+
+Installing Jenkins, its plugins and seed job
+-------------------------------------------
+
+For it you just need to run the folling commands:
+
+      - git clone https://github.com/camiloribeiro/cdeasy.git
+      - ./setup
+      
+Then you will have to wait for a while, ns your jenkina will be online on http://localhost:8080. To improve it, you can add jenkins as a alias to localhost, so you will be able to access it on http://jenkins:8080.
+
+If you access it right after running the setup script, you will see that it is a pretty new installation, without plugins and without any job. As soon as the setup is done, it will install some plugins and create a job called seed.
 
 LICENSE
 =======
