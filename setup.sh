@@ -6,5 +6,5 @@ if [ "$(uname)" == "Darwin" ]; then
   VBoxManage controlvm boot2docker-vm natpf1 "jenkins,tcp,127.0.0.1,8080,,8080" &>/dev/null
 fi
 
-docker-compose build jenkins
+docker-compose build jenkins agentserver
 docker-compose up -d

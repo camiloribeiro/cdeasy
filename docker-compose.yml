@@ -4,11 +4,21 @@ jenkins:
     - "8080:8080"
     - "50000:50000"
   tty: true
+  links:
+    - agentserver
 
 jenkinsSetup:
   image: java:8-jdk
   links:
     - jenkins
   volumes:
-    - docker/setupJenkins:/tmp
+    - ./docker/setupJenkins:/tmp
   command: /tmp/setup-jenkins.sh
+
+agentserver:
+  build: docker/agentserver
+  ports:
+    - "4243:4243"
+    - "2375:2375"
+  tty: true
+  privileged: true
