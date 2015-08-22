@@ -7,7 +7,7 @@ job("deploy_to_stage") {
   }
 
   steps {
-    shell 'true'
+    shell 'sleep $((RANDOM%10+5))'
   }
 
   publishers {

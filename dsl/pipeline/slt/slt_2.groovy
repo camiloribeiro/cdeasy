@@ -7,7 +7,7 @@ job("service_level_test_2") {
   }
 
   steps {
-    shell 'true'
+    shell 'sleep $((RANDOM%10+5))'
   }
 
 }

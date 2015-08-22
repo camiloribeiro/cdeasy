@@ -7,7 +7,7 @@ job("stress_test") {
   }
 
   steps {
-    shell 'true'
+    shell 'sleep $((RANDOM%10+5))'
   }
 
 }

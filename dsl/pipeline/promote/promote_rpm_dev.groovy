@@ -7,7 +7,7 @@ job("promote_rpm_to_dev") {
   }
 
   steps {
-    shell 'true'
+    shell 'sleep $((RANDOM%10+5))'
   }
 
   publishers {
