@@ -19,7 +19,7 @@ Before clonning this repository you you need docker, docker-compose and git in y
 If you want to try new stuff, than a IDE of your preference could be needed. In any case, it should be able to be edited using only VIM or any other favority text editor
 
 OXS
-______
+----
  
 If you are new to docker and you want to get some abstraction on the docker machine, please install boot2docker:
 
@@ -65,8 +65,30 @@ For it you just need to run the folling commands:
 
       - git clone https://github.com/camiloribeiro/cdeasy.git
       - ./setup
+
+You can access localhost:8080 and it should be available
+
+Optional agent server to provision docker slaves automatically (under development)
+-----
+
+Optionally we can add the agent server to provide new docker slaves, but in this case we need to set some configurations manualy:
+
+-> Manage Jenkins  ->  Configure System  ->  Cloud: Select Docker
+
+In the docker configuration set:
+
+      - Name as docker
+      - Docker URL as http://agentserver:4243
+      - Container Cap to 5
+
+Select Add Docker Template and set:
+
+      - Docker Image as camiloribeiro/dockerslave
+      - Add a new credential to user jenkins and password also jenkins
+
+It is all set!
       
-Then you will have to wait for a while, ns your jenkina will be online on http://localhost:8080. To improve it, you can add jenkins as a alias to localhost, so you will be able to access it on http://jenkins:8080.
+Then you will have to wait for a while, and your jenkins will be online on http://localhost:8080. To improve it, you can add jenkins as a alias to localhost, so you will be able to access it on http://jenkins:8080.
 
 If you access it right after running the setup script, you will see that it is a pretty new installation, without plugins and without any job. As soon as the setup is done, it will install some plugins and create a job called seed.
 
