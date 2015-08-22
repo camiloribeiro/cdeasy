@@ -16,7 +16,7 @@ project.getBuildersList().clear()
 
 
 project.getBuildersList().add(new ExecuteDslScripts(
-  new ExecuteDslScripts.ScriptLocation("false","dsl/*.groovy",null),
+  new ExecuteDslScripts.ScriptLocation("false","dsl/**/*.groovy",null),
   false,
   RemovedJobAction.IGNORE,
   RemovedViewAction.IGNORE,
