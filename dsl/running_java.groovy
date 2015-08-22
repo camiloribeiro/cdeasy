@@ -12,7 +12,7 @@ job("Running_Java_with_Docker") {
   }
   steps {
     shell 'docker pull niaquinto/gradle:2.5'
-    shell 'docker run -v $WORKSPACE/:/gradle -w /gradle niaquintio/gradle:2.5 clean build runInParallel'
+    shell 'docker run -v $WORKSPACE/:/gradle -w /gradle niaquinto/gradle:2.5 clean build runInParallel'
   }
   publishers {
     publishHtml {
