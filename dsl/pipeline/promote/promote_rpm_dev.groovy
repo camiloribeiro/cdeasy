@@ -24,9 +24,7 @@ job("promote_rpm_to_dev") {
       'hudson.plugins.parameterizedtrigger.BuildTrigger' {
         'configs' {
           'hudson.plugins.parameterizedtrigger.BuildTriggerConfig' {
-            'config' {
-              'hudson.plugins.parameterizedtrigger.CurrentBuildParameters'
-             }
+            'hudson.plugins.parameterizedtrigger.CurrentBuildParameters'
             projects('promote_rpm_to_stage')
               condition('SUCCESS')
               triggerWithNoParameters('true')
