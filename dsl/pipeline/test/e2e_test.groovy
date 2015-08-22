@@ -7,7 +7,7 @@ job("e2e_test") {
   }
 
   steps {
-    shell 'true'
+    shell 'sleep $[ ( $RANDOM % 10 )  + 1 ]s'
   }
 
 }

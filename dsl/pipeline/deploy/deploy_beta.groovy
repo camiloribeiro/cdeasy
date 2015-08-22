@@ -7,7 +7,7 @@ job("deploy_to_beta") {
   }
   
   steps {
-    shell 'true'
+    shell 'sleep $[ ( $RANDOM % 10 )  + 1 ]s'
   }
 
   publishers {

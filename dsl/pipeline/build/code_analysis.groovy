@@ -7,7 +7,7 @@ job("code_analysis") {
   }
 
   steps {
-    shell 'true'
+    shell 'sleep $[ ( $RANDOM % 10 )  + 1 ]s'
   }
 
   publishers {

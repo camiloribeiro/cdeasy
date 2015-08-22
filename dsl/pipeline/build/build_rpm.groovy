@@ -7,7 +7,7 @@ job("build_rpm") {
   }
 
   steps {
-    shell 'true'
+    shell 'sleep $[ ( $RANDOM % 10 )  + 1 ]s'
   }
 
   publishers {
