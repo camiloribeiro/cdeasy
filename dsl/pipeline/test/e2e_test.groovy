@@ -1,6 +1,6 @@
 job("e2e_test") {
 
-  deliveryPipelineConfiguration('Stage', 'End to end Test')
+  deliveryPipelineConfiguration('Stage Testing', 'End to end Test')
 
   triggers {
     scm 'H/5 * * * *'
