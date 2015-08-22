@@ -3,7 +3,7 @@ listView('Language agnostic language') {
     filterBuildQueue()
     filterExecutors()
     jobs {
-        regex('running_.+')
+        regex('running.+')
     }
   jobFilters {
     status {
