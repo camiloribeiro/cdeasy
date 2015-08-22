@@ -10,4 +10,10 @@ job("build_rpm") {
     shell 'true'
   }
 
+  publishers {
+    downstreamParameterized {
+      trigger("promote", "SUCCESS") 
+    }
+  }
+
 }

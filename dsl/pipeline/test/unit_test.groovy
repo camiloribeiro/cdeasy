@@ -12,7 +12,7 @@ job("unit_test") {
 
   publishers {
     downstreamParameterized {
-      trigger("Code_analysis", "SUCCESS") 
+      trigger("code_analysis", "SUCCESS") 
     }
   }
 

@@ -10,5 +10,11 @@ job("code_analysis") {
     shell 'true'
   }
 
+  publishers {
+    downstreamParameterized {
+      trigger("build_rpm_to_dev", "SUCCESS") 
+    }
+  }
+
 }
 

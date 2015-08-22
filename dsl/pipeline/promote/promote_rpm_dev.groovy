@@ -10,5 +10,11 @@ job("promote_rpm_to_dev") {
     shell 'true'
   }
 
+  publishers {
+    downstreamParameterized {
+      trigger("service_level_test_1,service_level_test_2,pen_test,stress_test,load_test", "SUCCESS") 
+    }
+  }
+
 }
 
