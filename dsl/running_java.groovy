@@ -1,4 +1,4 @@
-job("Running_Java_with_Docker") {
+job("running_Java_with_Docker") {
   scm {
     git {
       remote {
