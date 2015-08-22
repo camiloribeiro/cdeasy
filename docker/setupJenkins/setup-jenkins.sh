@@ -13,6 +13,10 @@ curl -o /tmp/jenkins-cli.jar http://jenkins:8080/jnlpJars/jenkins-cli.jar
 curl -X POST -d '<jenkins><install plugin="parameterized-trigger@2.28" /></jenkins>' --header 'Content-Type: text/xml' $host$url
 sleep 10
 
+# Jenkins Join trigger plugin https://wiki.jenkins-ci.org/display/JENKINS/Join+Plugin
+curl -X POST -d '<jenkins><install plugin="join@1.16" /></jenkins>' --header 'Content-Type: text/xml' $host$url
+sleep 10
+
 # jenkis git plugin https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin
 curl -X POST -d '<jenkins><install plugin="git@2.4.0" /></jenkins>' --header 'Content-Type: text/xml' $host$url
 sleep 10
