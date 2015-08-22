@@ -1,6 +1,11 @@
 job("Running Ruby with Docker") {
   scm {
-    git "https://github.com/camiloribeiro/icecream.git"
+    git {
+      remote {
+        name('origin')
+        url ("https://github.com/camiloribeiro/icecream.git")
+      }
+    }
   }
   triggers {
     scm 'H/5 * * * *'
