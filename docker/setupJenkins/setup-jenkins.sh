@@ -13,7 +13,7 @@ curl -o /tmp/jenkins-cli.jar http://jenkins:8080/jnlpJars/jenkins-cli.jar
 curl -X POST -d '<jenkins><install plugin="git@2.4.0" /></jenkins>' --header 'Content-Type: text/xml' $host$url
 sleep 10
 
-# jenkis job dls plugin https://wiki.jenkins-ci.org/display/JENKINS/Job+DSL+Plugin
+# jenkis job dsl plugin https://wiki.jenkins-ci.org/display/JENKINS/Job+DSL+Plugin
 curl -X POST -d '<jenkins><install plugin="job-dsl@1.37" /></jenkins>' --header 'Content-Type: text/xml' $host$url
 sleep 10
 

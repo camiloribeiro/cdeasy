@@ -1,6 +1,6 @@
 job("Running Ruby with Docker") {
   scm {
-    github "https://github.com/camiloribeiro/icecream.git"
+    git "https://github.com/camiloribeiro/icecream.git"
   }
   triggers {
     scm 'H/5 * * * *'
