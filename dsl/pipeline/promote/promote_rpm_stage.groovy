@@ -12,7 +12,9 @@ job("promote_rpm_to_stage") {
 
   publishers {
     downstreamParameterized {
-      trigger("deploy_to_stage", "SUCCESS") 
+      trigger("deploy_to_stage", "SUCCESS")  {
+        currentBuild()
+      }
     }
   }
 

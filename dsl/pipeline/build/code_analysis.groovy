@@ -12,7 +12,9 @@ job("code_analysis") {
 
   publishers {
     downstreamParameterized {
-      trigger("build_rpm", "SUCCESS") 
+      trigger("build_rpm", "SUCCESS")  {
+        currentBuild()
+      }
     }
   }
 

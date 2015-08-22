@@ -12,7 +12,9 @@ job("deploy_to_stage") {
 
   publishers {
     downstreamParameterized {
-      trigger("e2e_test", "SUCCESS") 
+      trigger("e2e_test", "SUCCESS")  {
+        currentBuild()
+      }
     }
   }
 
