@@ -23,6 +23,7 @@ job("promote_rpm_to_dev") {
     'joinPublishers' {
       'hudson.plugins.parameterizedtrigger.BuildTrigger' {
         'configs' {
+          'hudson.plugins.parameterizedtrigger.CurrentBuildParameters'
           'hudson.plugins.parameterizedtrigger.BuildTriggerConfig' {
             projects('promote_rpm_to_stage')
               condition('SUCCESS')
