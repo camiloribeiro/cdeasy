@@ -14,5 +14,11 @@ job("Running_Java_with_Docker") {
     shell 'docker pull niaquinto/gradle:2.5'
     shell 'docker run -v $WORKSPACE/:/gradle -w /gradle niaquintio/gradle:2.5 clean build runInParallel'
   }
+  publishers {
+    publishHtml {
+      report('build/reports/cucumber/feature-overview.html') {
+        reportName('Cucumber Report')
+      }
+    }
+  }
 }
-
