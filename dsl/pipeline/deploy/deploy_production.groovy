@@ -7,7 +7,7 @@ job("deploy_to_production") {
   }
 
   steps {
-    shell 'sleep $[ ( $RANDOM % 10 )  + 1 ]s'
+    shell 'true'
   }
 
 }
