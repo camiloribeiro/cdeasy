@@ -12,7 +12,7 @@ job("build_rpm") {
 
   publishers {
     downstreamParameterized {
-      trigger("promote", "SUCCESS") 
+      trigger("promote_rpm_to_dev", "SUCCESS") 
     }
   }
 
