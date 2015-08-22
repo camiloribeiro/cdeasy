@@ -9,6 +9,10 @@ sleep 50
 # Download jenkins-cli.jar
 curl -o /tmp/jenkins-cli.jar http://jenkins:8080/jnlpJars/jenkins-cli.jar
 
+# Jenkins Parametrized trigger https://wiki.jenkins-ci.org/display/JENKINS/Parameterized+Trigger+Plugin
+curl -X POST -d '<jenkins><install plugin="parameterized-trigger@2.28" /></jenkins>' --header 'Content-Type: text/xml' $host$url
+sleep 10
+
 # jenkis git plugin https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin
 curl -X POST -d '<jenkins><install plugin="git@2.4.0" /></jenkins>' --header 'Content-Type: text/xml' $host$url
 sleep 10
