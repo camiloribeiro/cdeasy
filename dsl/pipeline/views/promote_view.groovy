@@ -1,4 +1,4 @@
-listView('Deploys') {
+listView('Promote RPM') {
   description('All RPM promotion jobs')
     filterBuildQueue()
     filterExecutors()
