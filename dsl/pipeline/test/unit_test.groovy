@@ -12,9 +12,7 @@ job("unit_test") {
 
   publishers {
     downstreamParameterized {
-      trigger("Code_analysis", "SUCCESS") { 
-          predefinedProp('ORIGINAL_BUILD_NUMBER', originalBuildNumber)
-      }
+      trigger("Code_analysis", "SUCCESS") 
     }
   }
 
