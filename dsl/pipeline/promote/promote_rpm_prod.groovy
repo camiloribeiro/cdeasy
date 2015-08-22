@@ -10,4 +10,10 @@ job("promote_rpm_to_production") {
     shell 'true'
   }
 
+  publishers {
+    downstreamParameterized {
+      trigger("deploy_to_beta", "SUCCESS") 
+    }
+  }
+
 }

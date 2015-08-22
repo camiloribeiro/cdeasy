@@ -10,5 +10,27 @@ job("deploy_to_stage") {
     shell 'true'
   }
 
+  publishers {
+    downstreamParameterized {
+      trigger("e2e_test", "SUCCESS") 
+    }
+  }
+
+  configure { project -> project / publishers << 'join.JoinTrigger' {
+    'joinProjects'{}
+    'joinPublishers' {
+      'hudson.plugins.parameterizedtrigger.BuildTrigger' {
+        'configs' {
+          'hudson.plugins.parameterizedtrigger.BuildTriggerConfig' {
+            projects('promote_rpm_to_production')
+              condition('SUCCESS')
+              triggerWithNoParameters('true')
+          }
+        }
+      }
+    }
+    evenIfDownstreamUnstable('false')}
+  }
+
 }
 

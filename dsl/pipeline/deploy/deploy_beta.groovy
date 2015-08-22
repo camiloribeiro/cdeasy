@@ -10,5 +10,11 @@ job("deploy_to_beta") {
     shell 'true'
   }
 
+  publishers {
+    downstreamParameterized {
+      trigger("deploy_to_production", "SUCCESS") 
+    }
+  }
+
 }
 

@@ -10,5 +10,11 @@ job("promote_rpm_to_stage") {
     shell 'true'
   }
 
+  publishers {
+    downstreamParameterized {
+      trigger("deploy_to_stage", "SUCCESS") 
+    }
+  }
+
 }
 
