@@ -1,4 +1,4 @@
-job("Running Ruby with Docker") {
+job("Running_Ruby_with_Docker") {
   scm {
     git {
       remote {
@@ -11,8 +11,8 @@ job("Running Ruby with Docker") {
     scm 'H/5 * * * *'
   }
   steps {
-    shell 'docker pull ruby'
-    shell 'docker run -v $WORKSPACE/:/icecream -w /icecream ruby bundle && rake'
+    shell 'docker pull ruby:latest'
+    shell 'docker run -v $WORKSPACE/:/icecream -w /icecream ruby:latest bundle && rake'
   }
 }
 
