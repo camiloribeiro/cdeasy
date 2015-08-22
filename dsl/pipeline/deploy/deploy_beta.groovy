@@ -12,7 +12,7 @@ job("deploy_to_beta") {
 
   publishers {
     downstreamParameterized {
-      trigger("deploy_to_production", "SUCCESS")  {
+      trigger("deploy_to_production", 'SUCCESS', true, null) {
         currentBuild()
       }
     }
