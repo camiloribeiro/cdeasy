@@ -3,7 +3,7 @@ listView('Deploys') {
     filterBuildQueue()
     filterExecutors()
     jobs {
-        regex('.+deploy.+')
+        regex('deploy.+')
     }
   jobFilters {
     status {
