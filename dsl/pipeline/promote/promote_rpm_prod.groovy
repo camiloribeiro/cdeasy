@@ -11,11 +11,7 @@ job("promote_rpm_to_production") {
   }
 
   publishers {
-    downstreamParameterized {
-      trigger("deploy_to_beta", 'SUCCESS', true, null) {
-        currentBuild()
-      }
-    }
+    buildPipelineTrigger('deploy_to_beta, deploy_to_production')
   }
 
 }
