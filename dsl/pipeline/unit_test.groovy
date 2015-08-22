@@ -1,4 +1,4 @@
-job("Running_Ruby_with_Docker") {
+job("Unit_Test") {
   triggers {
     scm 'H/5 * * * *'
   }
