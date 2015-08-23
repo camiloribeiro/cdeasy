@@ -3,7 +3,7 @@ job("running_node_with_docker") {
     git {
       remote {
         name('origin')
-        url ("git@github.com:conancat/node-test-examples.git")
+        url ("https://github.com/conancat/node-test-examples.git")
       }
     }
   }
