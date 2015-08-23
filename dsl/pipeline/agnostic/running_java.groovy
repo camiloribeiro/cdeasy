@@ -16,8 +16,12 @@ job("running_Java_with_Docker") {
   }
   publishers {
     publishHtml {
-      report('build/reports/cucumber/feature-overview.html') {
+      report('build/reports/cucumber') {
         reportName('Cucumber Report')
+        reportFiles('feature-overview.html')
+        keepAll()
+        allowMissing()
+        alwaysLinkToLastBuild()
       }
     }
   }
