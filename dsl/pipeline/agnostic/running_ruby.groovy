@@ -1,4 +1,4 @@
-job("running_Ruby_with_Docker") {
+job("running_ruby_with_docker") {
   scm {
     git {
       remote {
