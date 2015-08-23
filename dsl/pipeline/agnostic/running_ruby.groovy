@@ -3,7 +3,7 @@ job("running_Ruby_with_Docker") {
     git {
       remote {
         name('origin')
-        url ("https://github.com/camiloribeiro/icecream.git")
+        url ("https://github.com/camiloribeiro/RestShifter.git")
       }
     }
   }
@@ -12,7 +12,7 @@ job("running_Ruby_with_Docker") {
   }
   steps {
     shell 'docker pull ruby:latest'
-    shell 'docker run -v $WORKSPACE/:/icecream -w /icecream ruby:latest bundle && rake'
+    shell 'docker run -v $WORKSPACE/:/icecream -w /icecream ruby:latest  sh -c \'bundle install && RACK_ENV=test rake\''
   }
 }
 
