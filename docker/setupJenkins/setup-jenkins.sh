@@ -9,6 +9,10 @@ sleep 50
 # Download jenkins-cli.jar
 curl -o /tmp/jenkins-cli.jar http://jenkins:8080/jnlpJars/jenkins-cli.jar
 
+# Jenkins Html publisher https://wiki.jenkins-ci.org/display/JENKINS/HTML+Publisher+Plugin
+curl -X POST -d '<jenkins><install plugin="htmlpublisher@1.5" /></jenkins>' --header 'Content-Type: text/xml' $host$url
+sleep 10
+
 # Jenkins Job Config History https://wiki.jenkins-ci.org/display/JENKINS/JobConfigHistory+Plugin
 curl -X POST -d '<jenkins><install plugin="jobConfigHistory@2.12" /></jenkins>' --header 'Content-Type: text/xml' $host$url
 sleep 10
