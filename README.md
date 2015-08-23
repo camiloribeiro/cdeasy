@@ -61,14 +61,16 @@ All the shell script used here will also not work in Windows. No Power shell wil
 Installing Jenkins, its plugins and seed job
 -------------------------------------------
 
+Please note that you will need a fast internet connection and you will need to allocate at least 2 GB RAM to your boot2docker machine. More memory, faster results ;)
+
 For it you just need to run the folling commands:
 
       - git clone https://github.com/camiloribeiro/cdeasy.git
       - ./setup
 
-You can access localhost:8080 and it should be available
+You can access localhost:8080 and it should be available. Please, wait up to five minutes after downloading all the docker images. A container called setupJenkins will run in background downloading and installing all the jenkins plugins and creating the seed job. It may take up to five minutes depending on how much memory you did allocate. Please be patient :), you can check by running docker-compose ps from time to time. When it shows the cdeasy_setupJenkins_1 container with exit 0, it means that jenkins is fully working.
 
-Optional agent server to provision docker slaves automatically (under development)
+Optional agent server to provision docker slaves automatically (work in progress)
 -----
 
 Optionally we can add the agent server to provide new docker slaves, but in this case we need to set some configurations manualy:
