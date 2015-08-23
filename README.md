@@ -53,7 +53,9 @@ You will also need to use docker-compose here, but I don't know a simple way to 
 
     - http://stackoverflow.com/questions/29289785/how-to-install-docker-compose-on-windows
 
-In this repo, in the blog post that will follow it and in the presentations there will not have any other reference to windows environments given my lack of experience with it. Please consider using another operating system if you are not able to run the full experience at first, than please adapt it later to windows. 
+In this repo, in the blog post that will follow it and in the presentations there will not have any other reference to windows environments given my lack of experience with it. 
+
+Please consider using another operating system if you are not able to run the full experience at first, than please adapt it later to windows. 
 If you see any improvements that this instructions or scripts could have, please consider to pull request :) Credits will be fully given to you
 
 All the shell script used here will also not work in Windows. No Power shell will be provided in our first release :(
@@ -68,7 +70,9 @@ For it you just need to run the folling commands:
       - git clone https://github.com/camiloribeiro/cdeasy.git
       - ./setup
 
-You can access localhost:8080 and it should be available. Please, wait up to five minutes after downloading all the docker images. A container called setupJenkins will run in background downloading and installing all the jenkins plugins and creating the seed job. It may take up to five minutes depending on how much memory you did allocate. Please be patient :), you can check by running docker-compose ps from time to time. When it shows the cdeasy_setupJenkins_1 container with exit 0, it means that jenkins is fully working.
+You can access localhost:8080 and it should be available. 
+
+Please, wait up to five minutes after downloading all the docker images. A container called setupJenkins will run in background downloading and installing all the jenkins plugins and creating the seed job. It may take up to five minutes depending on how much memory you did allocate. Please be patient :), you can check by running docker-compose ps from time to time. When it shows the cdeasy_setupJenkins_1 container with exit 0, it means that jenkins is fully working.
 
 Optional agent server to provision docker slaves automatically (work in progress)
 -----
