@@ -3,7 +3,7 @@ job("running_node_with_docker") {
     git {
       remote {
         name('origin')
-        url ("https://github.com/cgoldberg/python-unittest-tutorial.git")
+        url ("https://github.com/conancat/node-test-examples.git")
       }
     }
   }
@@ -12,7 +12,7 @@ job("running_node_with_docker") {
   }
   steps {
     shell 'docker pull node:latest'
-    shell 'docker run -v $WORKSPACE/:/node -w /node node:latest npm install mocha -g && npm install && mocha -R spec'
+    shell 'docker run -v $WORKSPACE/:/node -w /node node:latest npm install mocha -g && npm install'
   }
 }
 
