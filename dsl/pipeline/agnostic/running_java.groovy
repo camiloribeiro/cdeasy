@@ -1,4 +1,5 @@
 job("running_java_with_docker") {
+
   scm {
     git {
       remote {
@@ -7,13 +8,12 @@ job("running_java_with_docker") {
       }
     }
   }
-  triggers {
-    scm 'H/5 * * * *'
-  }
+
   steps {
     shell 'docker pull niaquinto/gradle:2.5'
     shell 'docker run -v $WORKSPACE/:/gradle -w /gradle niaquinto/gradle:2.5 clean build runInParallel'
   }
+
   publishers {
     publishHtml {
       report('build/reports/cucumber') {
@@ -25,4 +25,5 @@ job("running_java_with_docker") {
       }
     }
   }
+
 }

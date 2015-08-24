@@ -1,4 +1,5 @@
 job("running_node_with_docker") {
+
   scm {
     git {
       remote {
@@ -7,12 +8,11 @@ job("running_node_with_docker") {
       }
     }
   }
-  triggers {
-    scm 'H/5 * * * *'
-  }
+  
   steps {
     shell 'docker pull node:latest'
     shell 'docker run -v $WORKSPACE/:/node -w /node node:latest npm install mocha -g'
   }
+
 }
 

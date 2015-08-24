@@ -1,4 +1,5 @@
 job("running_compose_with_docker") {
+
   scm {
     git {
       remote {
@@ -7,9 +8,11 @@ job("running_compose_with_docker") {
       }
     }
   }
+
   steps {
     shell 'cd 02-express-redis-nodemon && docker-compose up -d'
     shell 'sleep 5 && curl http://localhost:3030'
   }
+
 }
 

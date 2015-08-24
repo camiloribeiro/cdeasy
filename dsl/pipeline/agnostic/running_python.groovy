@@ -1,4 +1,5 @@
 job("running_python_with_docker") {
+  
   scm {
     git {
       remote {
@@ -8,12 +9,11 @@ job("running_python_with_docker") {
       branch('master')
     }
   }
-  triggers {
-    scm 'H/5 * * * *'
-  }
+
   steps {
     shell 'docker pull python:latest'
     shell 'docker run -v $WORKSPACE/:/python -w /python python python test_simple.py'
   }
+
 }
 

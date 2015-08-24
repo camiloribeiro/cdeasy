@@ -1,4 +1,5 @@
 job("running_erlang_with_docker") {
+
   scm {
     git {
       remote {
@@ -7,12 +8,11 @@ job("running_erlang_with_docker") {
       }
     }
   }
-  triggers {
-    scm 'H/5 * * * *'
-  }
+
   steps {
     shell 'docker pull correl/erlang:latest'
     shell 'docker run -v $WORKSPACE/:/erlang -w /erlang correl/erlang ./rebar compile'
   }
+
 }
 
