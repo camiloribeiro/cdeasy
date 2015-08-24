@@ -2,9 +2,10 @@ job("running_python_with_docker") {
   scm {
     git {
       remote {
+        name ("origin)"
         url ("https://github.com/cgoldberg/python-unittest-tutorial.git")
-        branch('origin', 'master')
       }
+      branch('master')
     }
   }
   triggers {
