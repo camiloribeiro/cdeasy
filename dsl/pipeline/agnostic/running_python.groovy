@@ -4,6 +4,7 @@ job("running_python_with_docker") {
       remote {
         name('origin')
         url ("https://github.com/cgoldberg/python-unittest-tutorial.git")
+        branch('origin', 'master')
       }
     }
   }

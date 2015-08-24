@@ -1,4 +1,4 @@
-FROM jenkins:1.609.1
+FROM jenkins
 
 USER root
 RUN apt-get update -qq && apt-get install -qqy \
