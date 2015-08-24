@@ -8,9 +8,8 @@ job("running_compose_with_docker") {
     }
   }
   steps {
-    shell 'cd 02-express-redis-nodemon'
-    shell 'docker-compose up -d'
-    shell 'curl http://localhost:3030'
+    shell 'cd 02-express-redis-nodemon && docker-compose up -d'
+    shell 'sleep 5 && curl http://localhost:3030'
   }
 }
 
