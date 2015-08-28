@@ -18,7 +18,7 @@ Setting up the environment
 Before clonning this repository you you need docker, docker-compose and git in your machine. 
 If you want to try new stuff, than a IDE of your preference could be needed. In any case, it should be able to be edited using only VIM or any other favority text editor
 
-OXS
+OSX
 ----
  
 If you are new to docker and you want to get some abstraction on the docker machine, please install boot2docker:
@@ -55,8 +55,8 @@ You will also need to use docker-compose here, but I don't know a simple way to 
 
 In this repo, in the blog post that will follow it and in the presentations there will not have any other reference to windows environments given my lack of experience with it. 
 
-Please consider using another operating system if you are not able to run the full experience at first, than please adapt it later to windows. 
-If you see any improvements that this instructions or scripts could have, please consider to pull request :) Credits will be fully given to you
+Please consider using another operating system if you are not able to run the full experience at first, then please adapt it later to windows. 
+If you see any improvements that these instructions or scripts could have, please consider to pull request :) Credits will be fully given to you
 
 All the shell script used here will also not work in Windows. No Power shell will be provided in our first release :(
 
