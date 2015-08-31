@@ -41,8 +41,12 @@ sleep 20
 curl -X POST -d '<jenkins><install plugin="docker-plugin@0.12.0" /></jenkins>' --header 'Content-Type: text/xml' $host$url
 sleep 20 
 
+# Jenkins workflow aggregator https://wiki.jenkins-ci.org/display/JENKINS/Workflow+Plugin
+curl -X POST -d '<jenkins><install plugin="workflow-aggregator@1.9" /></jenkins>' --header 'Content-Type: text/xml' $host$url
+sleep 10
+
 # jenkis Delivery Pipeline Plugin https://wiki.jenkins-ci.org/display/JENKINS/Delivery+Pipeline+Plugin
-curl -X POST -d '<jenkins><install plugin="delivery-pipeline-plugin@0.9.5" /></jenkins>' --header 'Content-Type: text/xml' $host$url
+curl -X POST -d '<jenkins><install plugin="delivery-pipeline-plugin@0.9.7" /></jenkins>' --header 'Content-Type: text/xml' $host$url
 sleep 10
 
 # wait 20 sec
