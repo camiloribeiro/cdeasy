@@ -1,4 +1,4 @@
-listView('Language agnostic language') {
+listView('Language Agnostic') {
   description('Language agnostic jobs')
     filterBuildQueue()
     filterExecutors()
