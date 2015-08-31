@@ -9,6 +9,10 @@ sleep 120
 # Download jenkins-cli.jar
 curl -o /tmp/jenkins-cli.jar http://jenkins:8080/jnlpJars/jenkins-cli.jar
 
+# Jenkins green balls https://wiki.jenkins-ci.org/display/JENKINS/Green+Balls 
+curl -X POST -d '<jenkins><install plugin="greenballs@1.14" /></jenkins>' --header 'Content-Type: text/xml' $host$url
+sleep 20
+
 # Jenkins Html publisher https://wiki.jenkins-ci.org/display/JENKINS/HTML+Publisher+Plugin
 curl -X POST -d '<jenkins><install plugin="htmlpublisher@1.5" /></jenkins>' --header 'Content-Type: text/xml' $host$url
 sleep 20
