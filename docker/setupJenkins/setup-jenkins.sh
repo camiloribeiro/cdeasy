@@ -14,7 +14,7 @@ curl -X POST -d '<jenkins><install plugin="greenballs@1.14" /></jenkins>' --head
 sleep 20
 
 # Jenkins Html publisher https://wiki.jenkins-ci.org/display/JENKINS/HTML+Publisher+Plugin
-curl -X POST -d '<jenkins><install plugin="htmlpublisher@1.5" /></jenkins>' --header 'Content-Type: text/xml' $host$url
+curl -X POST -d '<jenkins><install plugin="htmlpublisher@1.6" /></jenkins>' --header 'Content-Type: text/xml' $host$url
 sleep 20
 
 # Jenkins Job Config History https://wiki.jenkins-ci.org/display/JENKINS/JobConfigHistory+Plugin
@@ -42,11 +42,11 @@ curl -X POST -d '<jenkins><install plugin="job-dsl@1.37" /></jenkins>' --header 
 sleep 20
 
 # jenkis docker-plugin https://wiki.jenkins-ci.org/display/JENKINS/Docker+Plugin 
-curl -X POST -d '<jenkins><install plugin="docker-plugin@0.12.0" /></jenkins>' --header 'Content-Type: text/xml' $host$url
+curl -X POST -d '<jenkins><install plugin="docker-plugin@0.13.0" /></jenkins>' --header 'Content-Type: text/xml' $host$url
 sleep 20 
 
 # Jenkins workflow aggregator https://wiki.jenkins-ci.org/display/JENKINS/Workflow+Plugin
-curl -X POST -d '<jenkins><install plugin="workflow-aggregator@1.9" /></jenkins>' --header 'Content-Type: text/xml' $host$url
+curl -X POST -d '<jenkins><install plugin="workflow-aggregator@1.10" /></jenkins>' --header 'Content-Type: text/xml' $host$url
 sleep 10
 
 # jenkis Delivery Pipeline Plugin https://wiki.jenkins-ci.org/display/JENKINS/Delivery+Pipeline+Plugin
