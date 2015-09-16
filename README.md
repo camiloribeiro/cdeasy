@@ -41,7 +41,7 @@ You will also need to install docker-compose:
     - curl -L https://github.com/docker/compose/releases/download/1.3.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
     - chmod +x /usr/local/bin/docker-compose 
 
-For more info please check: http://docs.dcker.com/compose/install/ 
+For more info please check: http://docs.docker.com/compose/install/ 
 
 Windows
 -------
