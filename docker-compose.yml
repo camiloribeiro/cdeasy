@@ -13,11 +13,3 @@ jenkinsSetup:
   volumes:
     - ./docker/setupJenkins:/tmp
   command: /tmp/setup-jenkins.sh
-
-agentserver:
-  build: docker/agentserver
-  ports:
-    - "4243:4243"
-    - "2375:2375"
-  tty: true
-  privileged: true
