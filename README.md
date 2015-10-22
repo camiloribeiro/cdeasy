@@ -70,33 +70,9 @@ For it you just need to run the folling commands:
       - git clone https://github.com/camiloribeiro/cdeasy.git
       - ./setup
 
-You can access localhost:8080 and it should be available. 
-
-Please, wait up to five minutes after downloading all the docker images. A container called setupJenkins will run in background downloading and installing all the jenkins plugins and creating the seed job. It may take up to five minutes depending on how much memory you did allocate. Please be patient :), you can check by running docker-compose ps from time to time. When it shows the cdeasy_setupJenkins_1 container with exit 0, it means that jenkins is fully working.
-
-Optional agent server to provision docker slaves automatically (work in progress)
------
-
-Optionally we can add the agent server to provide new docker slaves, but in this case we need to set some configurations manualy:
-
--> Manage Jenkins  ->  Configure System  ->  Cloud: Select Docker
-
-In the docker configuration set:
-
-      - Name as docker
-      - Docker URL as http://agentserver:4243
-      - Container Cap to 5
-
-Select Add Docker Template and set:
-
-      - Docker Image as camiloribeiro/dockerslave
-      - Add a new credential to user jenkins and password also jenkins
-
 It is all set!
-      
-Then you will have to wait for a while, and your jenkins will be online on http://localhost:8080. To improve it, you can add jenkins as a alias to localhost, so you will be able to access it on http://jenkins:8080.
 
-If you access it right after running the setup script, you will see that it is a pretty new installation, without plugins and without any job. As soon as the setup is done, it will install some plugins and create a job called seed.
+You can access localhost:8080 (or whatever docker host ip you use) and it should be available. 
 
 LICENSE
 =======
