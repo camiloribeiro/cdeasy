@@ -11,14 +11,13 @@ git 2.4.0
 greenballs 1.14
 matrix-project 1.6
 workflow-step-api 1.4
-htmlpublisher 1.6
-maven-plugin 2.0
+htmlpublisher 1.8
+maven-plugin 2.12.1
 jobConfigHistory 2.12
 parameterized-trigger 2.17 
 jquery 1.7.2-1
-dashboard-view 2.2  
+dashboard-view 2.9.6
 build-pipeline-plugin 1.4.8
-build-pipeline-plugin 1.4.7
 parameterized-trigger 2.29
 join 1.16
 job-dsl 1.39
