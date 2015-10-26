@@ -1,3 +1,3 @@
-import com.camiloribeiro.cdeasy.view.View
+import com.camiloribeiro.cdeasy.viewHelper.ViewHelper
 
-View.addView("Language Agnostic", "Language Agnostic Jobs", "running.+")
+new ViewHelper().addView("Language Agnostic", "Language Agnostic Jobs", "running.+")

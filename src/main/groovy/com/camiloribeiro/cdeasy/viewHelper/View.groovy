@@ -1,9 +1,14 @@
-package com.camiloribeiro.cdeasy.view
+package com.camiloribeiro.cdeasy.viewHelper
 
-class View {
-    def static addView(String name, String descriptino, String regex) {
-        listView(name) {
-            description(desciption)
+import javaposse.jobdsl.dsl.ViewFactory
+
+class ViewHelper {
+    def dslFactory = this as ViewFactory
+
+    def addView(String name, String description, String regex) {
+        dslFactory.listView(name)
+                /* {
+            description(description)
             filterBuildQueue()
             filterExecutors()
             jobs {
@@ -18,6 +23,6 @@ class View {
                 lastDuration()
                 buildButton()
             }
-        }
+        }*/
     }
 }

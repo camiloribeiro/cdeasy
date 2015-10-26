@@ -1,3 +1,3 @@
-import com.camiloribeiro.cdeasy.view.view
+import com.camiloribeiro.cdeasy.viewHelper.ViewHelper
 
-view.addview("promote rpm", "all rpm promotion jobs", "promote_rpm.+")
+new ViewHelper().addView("Promote RPM", "All RPM promotion jobs", "promote_rpm.+")

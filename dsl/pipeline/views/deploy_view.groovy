@@ -1,3 +1,3 @@
-import com.camiloribeiro.cdeasy.view.View
+import com.camiloribeiro.cdeasy.viewHelper.ViewHelper
 
-View.addView("Deploys", "All Deploy Jobs", "deploy.+")
+new ViewHelper().addView("Deploys", "All Deploy Jobs", "deploy.+")
