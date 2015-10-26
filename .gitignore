@@ -1,1 +1,7 @@
 docker/setupJenkins/jenkins-cli.jar
+.gradle/*
+gradle/*
+build/*
+.idea*
+gradlew.bat
+*iml

@@ -1,0 +1,24 @@
+apply plugin: "groovy"
+apply plugin: 'application'
+
+sourceCompatibility = '1.8' 
+
+mainClassName='CDeasy'
+description = "CDeasy Jobs"
+
+sourceSets {
+  jobs {
+    groovy {
+      srcDirs 'dsl'
+    }
+  }
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.1'
+  compile group: 'org.jenkins-ci.plugins', name: 'job-dsl', version: "1.39"
+}

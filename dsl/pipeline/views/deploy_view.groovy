@@ -1,22 +1,3 @@
-listView('Deploys') {
-  description('All Deploy jobs')
-    filterBuildQueue()
-    filterExecutors()
-    jobs {
-        regex('deploy.+')
-    }
-  jobFilters {
-    status {
-      status(Status.UNSTABLE)
-    }
-  }
-  columns {
-    status()
-      weather()
-      name()
-      lastSuccess()
-      lastFailure()
-      lastDuration()
-      buildButton()
-  }
-}
+import com.camiloribeiro.cdeasy.view.View
+
+View.addView("Deploys", "All Deploy Jobs", "deploy.+")
