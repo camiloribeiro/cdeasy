@@ -1,7 +1,7 @@
 package com.camiloribeiro.cdeasy.view
 
 class View {
-    def addView(String name, String descriptino, String regex) {
+    def static addView(String name, String descriptino, String regex) {
         listView(name) {
             description(desciption)
             filterBuildQueue()
