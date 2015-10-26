@@ -2,12 +2,12 @@ package com.camiloribeiro.cdeasy.view
 
 class View {
     def addView(String name, String descriptino, String regex) {
-        listView('Deploys') {
-            description('All Deploy jobs')
+        listView(name) {
+            description(desciption)
             filterBuildQueue()
             filterExecutors()
             jobs {
-                regex('deploy.+')
+                regex(regex)
             }
             columns {
                 status()
