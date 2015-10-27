@@ -5,11 +5,3 @@ jenkins:
     - "50000:50000"
   tty: true
   privileged: true
-
-jenkinsSetup:
-  image: java:8-jdk
-  links:
-    - jenkins
-  volumes:
-    - ./docker/setupJenkins:/tmp
-  command: /tmp/setup-jenkins.sh
