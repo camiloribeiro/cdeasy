@@ -1,3 +1,3 @@
-import com.camiloribeiro.cdeasy.viewHelper.ViewHelper
+import com.camiloribeiro.cdeasy.view.ViewHelper
 
-new ViewHelper().addView("Service Level tests", "All service level test jobs", "service_level_test.+")
+ViewHelper.addView("Service Level tests", "All service level test jobs", "service_level_test.+")
