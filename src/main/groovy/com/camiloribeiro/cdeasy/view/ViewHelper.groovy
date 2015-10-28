@@ -6,7 +6,7 @@ import javaposse.jobdsl.dsl.views.NestedViewsContext
 
 class ViewHelper {
 
-    def addView(String viewName, String viewDescription, String viewegex) {
+    def static addView(String viewName, String viewDescription, String viewegex) {
         JobManagement jm = new MemoryJobManagement()
         def viewFactory = new NestedViewsContext(jm)
         return viewFactory.listView(viewName) {
