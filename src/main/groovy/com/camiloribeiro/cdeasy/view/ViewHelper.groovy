@@ -1,15 +1,22 @@
 package com.camiloribeiro.cdeasy.view
 
 import javaposse.jobdsl.dsl.JobManagement
+import javaposse.jobdsl.dsl.JobParent
 import javaposse.jobdsl.dsl.MemoryJobManagement
-import javaposse.jobdsl.dsl.views.NestedViewsContext
 
 class ViewHelper {
 
+    static JobManagement jm = new MemoryJobManagement()
+    static JobParent jp = new JobParent() {
+        @Override
+        Object run() {
+            return null
+        }
+    }
+
     def static addView(String viewName, String viewDescription, String viewegex) {
-        JobManagement jm = new MemoryJobManagement()
-        def viewFactory = new NestedViewsContext(jm)
-        return viewFactory.listView(viewName) {
+        jp.listView(viewName) {
+            setName(viewName)
             description(viewDescription)
             filterBuildQueue()
             filterExecutors()
@@ -28,3 +35,4 @@ class ViewHelper {
         }
     }
 }
+

@@ -20,8 +20,9 @@ class ViewHelperTest extends Specification {
         then:
         with(view.node) {
             name() == 'hudson.model.ListView'
+            view.node.description[0].value() == viewDescription
+            view.node.includeRegex[0].value() == viewRegex
         }
-
 
     }
 }
