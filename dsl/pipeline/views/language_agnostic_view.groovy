@@ -1,3 +1,4 @@
 import com.camiloribeiro.cdeasy.view.ViewHelper
+import javaposse.jobdsl.dsl.DslFactory
 
-ViewHelper.addView("Language Agnostic", "Language Agnostic Jobs", "running.+")
+ViewHelper.addView(this as DslFactory, "Language Agnostic", "Language Agnostic Jobs", "running.+")

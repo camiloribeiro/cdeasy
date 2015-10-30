@@ -1,22 +1,10 @@
 package com.camiloribeiro.cdeasy.view
 
-import javaposse.jobdsl.dsl.JobManagement
-import javaposse.jobdsl.dsl.JobParent
-import javaposse.jobdsl.dsl.MemoryJobManagement
+import javaposse.jobdsl.dsl.DslFactory
 
 class ViewHelper {
-
-    static JobManagement jm = new MemoryJobManagement()
-    static JobParent jp = new JobParent() {
-        @Override
-        Object run() {
-            return null
-        }
-    }
-
-    def static addView(String viewName, String viewDescription, String viewegex) {
-        jp.listView(viewName) {
-            setName(viewName)
+    def static addView(DslFactory dslFactory, String viewName, String viewDescription, String viewegex) {
+        dslFactory.listView(viewName) {
             description(viewDescription)
             filterBuildQueue()
             filterExecutors()
