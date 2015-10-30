@@ -14,6 +14,9 @@ project.scm = gitScm
 
 project.getBuildersList().clear()
 
+project.getBuildersList().add(new Shell("docker pull niaquinto/gradle"));
+
+project.getBuildersList().add(new Shell("docker run -v \$PWD:/usr/bin/app --entrypoint=gradle niaquinto/gradle build"));
 
 project.getBuildersList().add(new ExecuteDslScripts(
   new ExecuteDslScripts.ScriptLocation("false","dsl/**/*.groovy",null),
@@ -21,7 +24,7 @@ project.getBuildersList().add(new ExecuteDslScripts(
   RemovedJobAction.IGNORE,
   RemovedViewAction.IGNORE,
   LookupStrategy.JENKINS_ROOT,
-  null)
+  "src/main/groovy")
 );
 
 project.save()

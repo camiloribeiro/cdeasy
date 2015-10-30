@@ -1,22 +1,3 @@
-listView('Service Level Tests') {
-  description('All Service Level Tests jobs')
-    filterBuildQueue()
-    filterExecutors()
-    jobs {
-        regex('service_level_test.+')
-    }
-  jobFilters {
-    status {
-      status(Status.UNSTABLE)
-    }
-  }
-  columns {
-    status()
-      weather()
-      name()
-      lastSuccess()
-      lastFailure()
-      lastDuration()
-      buildButton()
-  }
-}
+import com.camiloribeiro.cdeasy.view.ViewHelper
+
+ViewHelper.addView("Service Level tests", "All service level test jobs", "service_level_test.+")

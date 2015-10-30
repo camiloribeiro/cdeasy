@@ -16,7 +16,10 @@ RUN chmod +x /usr/local/bin/docker-compose
 
 COPY plugins.txt /usr/share/jenkins/plugins.txt
 COPY start.sh /tmp/start.sh
+
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
+
+COPY seed.groovy /usr/share/jenkins/ref/init.groovy.d/seed.groovy
 
 RUN touch /var/run/docker.sock
 

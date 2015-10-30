@@ -1,3 +1,15 @@
+git-server 1.5
+durable-task 1.6
+workflow-step-api 1.10.1
+workflow-durable-task-step 1.10.1
+workflow-cps 1.10.1
+workflow-job 1.10.1
+workflow-scm-step 1.10.1
+workflow-support 1.10.1
+workflow-cps-global-lib 1.10.1
+workflow-basic-steps 1.10.1
+workflow-api 1.10.1
+workflow-aggregator 1.10.1
 promoted-builds 2.21
 credentials 1.22 
 git-client 1.18.0 
@@ -10,7 +22,6 @@ parameterized-trigger 2.4
 git 2.4.0
 greenballs 1.14
 matrix-project 1.6
-workflow-step-api 1.4
 htmlpublisher 1.8
 maven-plugin 2.12.1
 jobConfigHistory 2.12
@@ -22,6 +33,5 @@ parameterized-trigger 2.29
 join 1.16
 job-dsl 1.39
 docker-plugin 0.13.0
-workflow-aggregator 1.10
 delivery-pipeline-plugin 0.9.7
 view-job-filters 1.27
