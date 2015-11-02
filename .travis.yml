@@ -6,6 +6,3 @@ jdk:
   - oraclejdk8
   - openjdk7
   - oraclejdk8
-
-gradle check
-gradle test
