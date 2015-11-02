@@ -1,4 +1,4 @@
-package pipeline.build
+package pipeline.jobs
 
 import com.camiloribeiro.cdeasy.job.JobHelper
 import javaposse.jobdsl.dsl.DslFactory

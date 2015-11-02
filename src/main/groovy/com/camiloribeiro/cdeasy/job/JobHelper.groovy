@@ -65,5 +65,12 @@ class JobHelper {
         job.deliveryPipelineConfiguration(buildStage, stepName)
         job
     }
+
+    static Job addDeliveryPipelineTrigger(Job job, ArrayList<String> jobs) {
+        job.publishers {
+            buildPipelineTrigger(jobs.join(", "))
+        }
+        job
+    }
 }
 

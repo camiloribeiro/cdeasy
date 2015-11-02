@@ -89,4 +89,17 @@ class JobHelperTest extends Specification {
             it.stageName[0].value() == "build stage"
         }
     }
+
+    def "Should set delivery pipeline trigger"() {
+        given:
+        def Job newJob = JobHelper.createJob(getJobParent(), "foo")
+
+        when:
+        newJob = JobHelper.addDeliveryPipelineTrigger(newJob, ["foo", "bar"])
+
+        then:
+        newJob.node.'publishers'[0]
+                .'au.com.centrumsystems.hudson.plugin.buildpipeline.trigger.BuildPipelineTrigger'[0]
+                .downstreamProjectNames[0].value() == "foo, bar"
+    }
 }

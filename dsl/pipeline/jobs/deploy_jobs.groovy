@@ -1,4 +1,4 @@
-package pipeline.deploy
+package pipeline.jobs
 
 import com.camiloribeiro.cdeasy.job.JobHelper
 import javaposse.jobdsl.dsl.DslFactory
@@ -8,7 +8,7 @@ Job deploy_to_beta = JobHelper.createJob(this as DslFactory, "deploy_to_beta")
 JobHelper.addStep(deploy_to_beta, "sleep \$((RANDOM%10+5))")
 JobHelper.addDeliveryPipelineConfiguration(deploy_to_beta, 'Beta', 'Deploy to Beta')
 
-Job deploy_to_prod = JobHelper.createJob(this as DslFactory, "deploy_to_prod")
+Job deploy_to_prod = JobHelper.createJob(this as DslFactory, "deploy_to_production")
 JobHelper.addStep(deploy_to_prod, "sleep \$((RANDOM%10+5))")
 JobHelper.addDeliveryPipelineConfiguration(deploy_to_prod, 'Production', 'Deploy to Production')
 
