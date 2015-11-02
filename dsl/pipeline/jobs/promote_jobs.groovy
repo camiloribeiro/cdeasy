@@ -18,4 +18,4 @@ JobHelper.addDownstreamParameterized(promote_rpm_to_stage, ["deploy_to_stage"], 
 Job promote_rpm_to_production = JobHelper.createJob(this as DslFactory, "promote_rpm_to_production")
 JobHelper.addStep(promote_rpm_to_production, "sleep \$((RANDOM%10+5))")
 JobHelper.addDeliveryPipelineConfiguration(promote_rpm_to_production, 'Deploy to Production', 'Promote RPM to production')
-JobHelper.addDeliveryPipelineTrigger(promote_rpm_to_production, ["deploy_to_production", "deploy_to_stage"])
+JobHelper.addDeliveryPipelineTrigger(promote_rpm_to_production, ["deploy_to_production", "deploy_to_beta"])
