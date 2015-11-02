@@ -77,4 +77,18 @@ class JobHelperTest extends Specification {
             it.'condition'[0].value() == SUCCESS.toString()
         }
     }
+
+    def "Should set delivery pipeline configuration"() {
+        given:
+        def Job newJob = JobHelper.createJob(getJobParent(), "foo")
+
+        when:
+        newJob = JobHelper.addDeliveryPipelineConfiguration(newJob, "build stage", "step name")
+
+        then:
+        with(newJob.node.'properties'[0].'se.diabol.jenkins.pipeline.PipelineProperty'[0]) {
+            it.taskName[0].value() == "step name"
+            it.stageName[0].value() == "build stage"
+        }
+    }
 }

@@ -59,5 +59,10 @@ class JobHelper {
         }
         job
     }
+
+    static Job addDeliveryPipelineConfiguration(Job job, String buildStage, String stepName) {
+        job.deliveryPipelineConfiguration(buildStage, stepName)
+        job
+    }
 }
 
