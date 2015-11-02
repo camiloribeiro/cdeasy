@@ -2,6 +2,7 @@ cdeasy - Continuous Delivery Made Easy
 ========================================
 
 [![Build Status](https://travis-ci.org/camiloribeiro/cdeasy.svg?branch=master)](https://travis-ci.org/camiloribeiro/cdeasy)
+
    
                        ##        .
                  ## ## ##       ==            Example of how docker and automation can help you
