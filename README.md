@@ -1,4 +1,4 @@
-cdeasy - Continuous Delivery Made Easy
+CDeasy - Continuous Delivery made easy
 ========================================
 
 [![Build Status](https://travis-ci.org/camiloribeiro/cdeasy.svg?branch=master)](https://travis-ci.org/camiloribeiro/cdeasy)
@@ -14,6 +14,14 @@ cdeasy - Continuous Delivery Made Easy
              \____\______/                    Continuous Develivey pipeline for your own needs :)
                              <3 Docker <3
    
+
+
+About CDeasy
+-----------------
+ 
+Here you will find a set of groovy scripts that use job-dsl plugin for jenkins (https://jenkinsci.github.io/job-dsl-plugin), jenkins itself (https://github.com/jenkinsci/jenkins), groovy and spock for testing (https://github.com/spockframework/spock)
+
+By running this example you will be able to setup a jenkins instance with an example of continuous delivey pipeline in your local computer, all instanciated by one simple click ;)
    
 Setting up the environment
 ===========================
@@ -76,6 +84,19 @@ For it you just need to run the folling commands:
 It is all set!
 
 You can access localhost:8080 (or whatever docker host ip you use) and it should be available. 
+
+Developing and Helping
+-----------------
+
+You can help this repo to get better by adding more tests, adding more language agnostic builds, adding new features, writing better documentation or refactoring the code.
+
+If you change the code, you must run the tests locally and make sure it is all green before pushing a pull request. 
+
+      - ./gradlew check
+
+Remember to replace the repo url to your forked repo in docker/jenkins/seed.groovy
+
+Have fun!
 
 LICENSE
 =======

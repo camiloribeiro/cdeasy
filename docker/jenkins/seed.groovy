@@ -7,7 +7,7 @@ import javaposse.jobdsl.plugin.*;
 def url = "https://github.com/camiloribeiro/cdeasy.git"
 def jobName = "seed"
 
-project = Jenkins.instance.createProject(FreeStyleProject, 'seed')
+project = Jenkins.instance.createProject(FreeStyleProject, jobName)
 def gitScm = new GitSCM(url)
 gitScm.branches = [new hudson.plugins.git.BranchSpec("*/master")]
 project.scm = gitScm
