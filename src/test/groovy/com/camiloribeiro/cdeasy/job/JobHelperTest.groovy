@@ -4,14 +4,19 @@ import com.camiloribeiro.cdeasy.job.JobHelper
 import javaposse.jobdsl.dsl.Job
 import spock.lang.*
 
+import static com.camiloribeiro.cdeasy.job.JobHelper.createJob
 import static com.camiloribeiro.cdeasy.support.SupportTestHelper.getJobParent
 
 @Unroll
 class JobHelperTest extends Specification {
 
+    private Job getDefaultJob() {
+        createJob(getJobParent(), "foo")
+    }
+
     def "Should create a job"() {
         when:
-        def Job newJob = JobHelper.createJob(getJobParent(), "foo")
+        def Job newJob = getDefaultJob()
 
         then:
         newJob.name == "foo"
@@ -19,7 +24,7 @@ class JobHelperTest extends Specification {
 
     def "Should add shell commands to a existing job"() {
         given:
-        def Job newJob = JobHelper.createJob(getJobParent(), "foo")
+        def Job newJob = getDefaultJob()
 
         when:
         newJob = JobHelper.addStep(newJob, "echo 'shell'")
@@ -37,7 +42,7 @@ class JobHelperTest extends Specification {
 
     def "Should add a git repository to a job"() {
         given:
-        def Job newJob = JobHelper.createJob(getJobParent(), "foo")
+        def Job newJob = getDefaultJob()
 
         when:
         newJob = JobHelper.addGitRepo(newJob, "git@foo.bar", "master")
@@ -51,7 +56,7 @@ class JobHelperTest extends Specification {
 
     def "Should add join trigger"() {
         given:
-        def Job newJob = JobHelper.createJob(getJobParent(), "foo")
+        def Job newJob = getDefaultJob()
 
         when:
         newJob = JobHelper.addJoinTrigger(newJob, ["jobA", "jobB", "jobC"])
@@ -64,7 +69,7 @@ class JobHelperTest extends Specification {
 
     def "Should add parametrized build"() {
         given:
-        def Job newJob = JobHelper.createJob(getJobParent(), "foo")
+        def Job newJob = getDefaultJob()
 
         when:
         newJob = JobHelper.addDownstreamParameterized(newJob, ["jobA", "jobB", "jobC"], "SUCCESS")
@@ -78,7 +83,7 @@ class JobHelperTest extends Specification {
 
     def "Should set delivery pipeline configuration"() {
         given:
-        def Job newJob = JobHelper.createJob(getJobParent(), "foo")
+        def Job newJob = getDefaultJob()
 
         when:
         newJob = JobHelper.addDeliveryPipelineConfiguration(newJob, "build stage", "step name")
@@ -92,7 +97,7 @@ class JobHelperTest extends Specification {
 
     def "Should set delivery pipeline trigger"() {
         given:
-        def Job newJob = JobHelper.createJob(getJobParent(), "foo")
+        def Job newJob = getDefaultJob()
 
         when:
         newJob = JobHelper.addDeliveryPipelineTrigger(newJob, ["foo", "bar"])
@@ -105,7 +110,7 @@ class JobHelperTest extends Specification {
 
     def "Should set publisher html plugin"() {
         given:
-        def Job newJob = JobHelper.createJob(getJobParent(), "foo")
+        def Job newJob = getDefaultJob()
 
         when:
         newJob = JobHelper.addHtmlReport(newJob, "path/to/report", "Report Show Name", "report_file.name")
