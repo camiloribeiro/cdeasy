@@ -4,7 +4,7 @@ apply plugin: 'application'
 sourceCompatibility = '1.8'
 
 task wrapper(type: Wrapper) {
-  gradleVersion = '2.0'
+  gradleVersion = '1.9'
 }
 
 mainClassName='CDeasy'
