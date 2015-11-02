@@ -1,7 +1,7 @@
 package com.camiloribeiro.cdeasy.support
 
 class Support {
-    static enum BuildConditions{
+    public static enum BuildConditions {
         SUCCESS
     }
 }

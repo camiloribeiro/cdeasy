@@ -1,9 +1,9 @@
 package pipeline.build
 
 import com.camiloribeiro.cdeasy.job.JobHelper
+import static com.camiloribeiro.cdeasy.support.Support.BuildConditions.SUCCESS
 import javaposse.jobdsl.dsl.DslFactory
 import javaposse.jobdsl.dsl.Job
-import static com.camiloribeiro.cdeasy.support.Support.BuildConditions.SUCCESS
 
 Job code_analisys = JobHelper.createJob(this as DslFactory, "code_analysis")
 JobHelper.addStep(code_analisys, "sleep \$((RANDOM%10+5))")
