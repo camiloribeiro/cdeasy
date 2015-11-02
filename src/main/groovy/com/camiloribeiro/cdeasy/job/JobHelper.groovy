@@ -72,5 +72,20 @@ class JobHelper {
         }
         job
     }
+
+    static Job addHtmlReport(Job job, String pathToReport, String showName, String fileName) {
+        job.publishers {
+            publishHtml {
+                report(pathToReport) {
+                    reportName(showName)
+                    reportFiles(fileName)
+                    keepAll()
+                    allowMissing()
+                    alwaysLinkToLastBuild()
+                }
+            }
+        }
+        job
+    }
 }
 

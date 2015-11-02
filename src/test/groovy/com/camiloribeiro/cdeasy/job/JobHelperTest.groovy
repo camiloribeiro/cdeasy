@@ -102,4 +102,19 @@ class JobHelperTest extends Specification {
                 .'au.com.centrumsystems.hudson.plugin.buildpipeline.trigger.BuildPipelineTrigger'[0]
                 .downstreamProjectNames[0].value() == "foo, bar"
     }
+
+    def "Should set publisher html plugin"() {
+        given:
+        def Job newJob = JobHelper.createJob(getJobParent(), "foo")
+
+        when:
+        newJob = JobHelper.addHtmlReport(newJob, "path/to/report", "Report Show Name", "report_file.name")
+
+        then:
+        with(newJob.node.'publishers'[0].'htmlpublisher.HtmlPublisher'[0].'reportTargets'[0].'htmlpublisher.HtmlPublisherTarget'[0]) {
+            it.'reportName'[0].value() == "Report Show Name"
+            it.'reportDir'[0].value() == "path/to/report"
+            it.'reportFiles'[0].value() == "report_file.name"
+        }
+    }
 }
