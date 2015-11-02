@@ -2,8 +2,6 @@ package com.camiloribeiro.cdeasy.view
 
 import com.camiloribeiro.cdeasy.job.JobHelper
 import javaposse.jobdsl.dsl.Job
-
-import static com.camiloribeiro.cdeasy.support.Support.BuildConditions.SUCCESS
 import spock.lang.*
 
 import static com.camiloribeiro.cdeasy.support.SupportTestHelper.getJobParent
@@ -69,12 +67,12 @@ class JobHelperTest extends Specification {
         def Job newJob = JobHelper.createJob(getJobParent(), "foo")
 
         when:
-        newJob = JobHelper.addDownstreamParameterized(newJob, ["jobA", "jobB", "jobC"], SUCCESS)
+        newJob = JobHelper.addDownstreamParameterized(newJob, ["jobA", "jobB", "jobC"], "SUCCESS")
 
         then:
         with(newJob.node.'publishers'[0].'hudson.plugins.parameterizedtrigger.BuildTrigger'[0].'configs'[0].'hudson.plugins.parameterizedtrigger.BuildTriggerConfig'[0]) {
             it.'projects'[0].value() == "jobA, jobB, jobC"
-            it.'condition'[0].value() == SUCCESS.toString()
+            it.'condition'[0].value() == "SUCCESS"
         }
     }
 

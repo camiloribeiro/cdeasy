@@ -3,6 +3,10 @@ apply plugin: 'application'
 
 sourceCompatibility = '1.8'
 
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.0'
+}
+
 mainClassName='CDeasy'
 description = "CDeasy Jobs"
 

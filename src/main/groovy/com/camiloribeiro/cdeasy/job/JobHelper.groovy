@@ -1,6 +1,5 @@
 package com.camiloribeiro.cdeasy.job
 
-import com.camiloribeiro.cdeasy.support.Support
 import javaposse.jobdsl.dsl.DslFactory
 import javaposse.jobdsl.dsl.Job
 
@@ -46,11 +45,11 @@ class JobHelper {
         job
     }
 
-    static Job addDownstreamParameterized(Job job, ArrayList<String> jobs, Support.BuildConditions buildConditions) {
+    static Job addDownstreamParameterized(Job job, ArrayList<String> jobs, String buildConditions) {
         job.publishers {
             downstreamParameterized {
                 trigger(jobs.join(", ")) {
-                    condition(buildConditions.toString())
+                    condition(buildConditions)
                     parameters {
                         currentBuild()
                     }
