@@ -1,7 +1,6 @@
 package com.camiloribeiro.cdeasy.view
 
 import com.camiloribeiro.cdeasy.job.JobHelper
-import groovy.transform.NotYetImplemented
 import javaposse.jobdsl.dsl.Job
 import spock.lang.*
 
@@ -21,14 +20,6 @@ class JobHelperTest extends Specification {
 
         then:
         newJob.name == "foo"
-    }
-
-    def "Job should show that it is automatically generated"() {
-        when:
-        def Job newJob = getDefaultJob()
-
-        then:
-        newJob.node.'description'[0].value() == "This job is automatically generated"
     }
 
     def "Should add shell commands to a existing job"() {

@@ -7,10 +7,8 @@ class JobHelper {
 
     public static Job createJob(DslFactory dslFactory, String name) {
         def Job job = dslFactory.job(name)
-        job.description("This job is automatically generated")
         job
     }
-
 
     public static Job addStep(Job job, String command) {
         job.steps() {
