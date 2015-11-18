@@ -5,7 +5,7 @@ import javaposse.jobdsl.dsl.DslFactory
 import javaposse.jobdsl.dsl.Job
 
 Job deploy_to_beta = JobHelper.createJob(this as DslFactory, "deploy_to_beta_1")
-JobHelper.addStep(deploy_to_beta, "sleep \$((RANDOM%10+5))")
+JobHelper.addStep(deploy_to_betasleep \$((RANDOM%10+5))")
 JobHelper.addDeliveryPipelineConfiguration(deploy_to_beta, 'Beta', 'Deploy to Beta')
 
 Job deploy_to_prod = JobHelper.createJob(this as DslFactory, "deploy_to_production")
