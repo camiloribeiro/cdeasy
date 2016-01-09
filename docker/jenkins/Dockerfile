@@ -19,8 +19,7 @@ COPY plugins.txt /usr/share/jenkins/plugins.txt
 RUN dos2unix /usr/share/jenkins/plugins.txt
 
 COPY start.sh /tmp/start.sh
-RUN dos2unix /tmp/start.sh
-RUN chmod +x /tmp/start.sh
+RUN dos2unix /tmp/start.sh && chmod +x /tmp/start.sh
 
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
 
