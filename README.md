@@ -79,7 +79,8 @@ Please note that you will need a fast internet connection and you will need to a
 For it you just need to run the folling commands:
 
       - git clone https://github.com/camiloribeiro/cdeasy.git
-      - ./setup
+      - cd cdeasy
+      - ./setup.sh
 
 It is all set!
 
