@@ -6,7 +6,7 @@ import javaposse.jobdsl.dsl.Job
 
 Job code_analysis = JobHelper.createJob(this as DslFactory, "code_analysis")
 JobHelper.addStep(code_analysis, "sleep \$((RANDOM%10+5))")
-JobHelper.addDownstreamParameterized(ccode_analysis, ["build_rpm"], "SUCCESS")
+JobHelper.addDownstreamParameterized(code_analysis, ["build_rpm"], "SUCCESS")
 JobHelper.addDeliveryPipelineConfiguration(code_analysis, 'Build', 'Code Analysis')
 
 Job build_rpm = JobHelper.createJob(this as DslFactory, "build_rpm")
