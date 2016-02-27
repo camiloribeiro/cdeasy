@@ -5,13 +5,13 @@ CDeasy - Continuous Delivery made easy
 
    
                        ##        .
-                 ## ## ##       ==            Example of how docker and automation can help you
-              ## ## ## ##      ===            to imporove your continuous delivery process.
+                 ## ## ##       ==            Example of how Docker and automation can help you
+              ## ## ## ##      ===            to improve your continuous delivery process.
           /""""""""""""""""\___/ ===
      ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   This is not a production ready framework or template
           \______ o          __/              to start using in your current project. Please take
             \    \        __/                 this as an inspiration to improve or implement a
-             \____\______/                    Continuous Develivey pipeline for your own needs :)
+             \____\______/                    Continuous Delivery pipeline for your own needs :)
                              <3 Docker <3
    
 
