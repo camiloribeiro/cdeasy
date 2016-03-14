@@ -80,11 +80,30 @@ For it you just need to run the folling commands:
 
       - git clone https://github.com/camiloribeiro/cdeasy.git
       - cd cdeasy
-      - ./setup.sh
+      - docker-compose build jenkins 
+      - docker-compose up
+
+From the version 2.0-alph-03 on, Jenkins requires to copy and past a jenkins token on start. 
+Check the output from the docker container and copy it. Example:
+
+```
+      - *************************************************************
+      - *************************************************************
+      - *************************************************************
+      -
+      - Jenkins initial setup is required. A security token is required to proceed.
+      - Please use the following security token to proceed to installation:
+      -
+      - >>>> theTokenShouldBeHere <<<<<
+      -
+      - *************************************************************
+      - *************************************************************
+      - *************************************************************
+```
 
 It is all set!
 
-You can access localhost:8080 (or whatever docker host ip you use) and it should be available. 
+Copy it and go to your local docker host port 8080 and past the token to start. Since we have installed all the plugins needed to run our pipelines, there is no need to install it in the first step. Just click in the upper right X to close without installing anything.
 
 Developing and Helping
 -----------------
