@@ -37,7 +37,7 @@ parameterized-trigger 2.30
 conditional-buildstep 1.3.3
 run-condition 1.0
 join 1.19
-job-dsl 1.43
+job-dsl 1.44
 docker-plugin 0.16.0
 ssh-slaves 1.10
 delivery-pipeline-plugin 0.9.8
