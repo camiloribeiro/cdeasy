@@ -36,8 +36,7 @@ class JobHelper {
                 publishers {
                     downstreamParameterized {
                         trigger(jobs.join(", ")) {
-                            triggerWithNoParameters(true)
-                            currentBuild()
+                            triggerWithNoParameters(true) 
                         }
                     }
                 }
