@@ -1,6 +1,12 @@
-jenkins:
-  build: docker/jenkins
-  ports:
-    - "8080:8080"
-  tty: true
-  privileged: true
+version: '2'
+services:
+  jenkins:
+    build:
+      context: docker/jenkins/
+    ports:
+      - "8080:8080"
+    tty: true
+    privileged: true
+    volumes:
+      - ./docker/jenkins/seed.groovy:/usr/share/jenkins/ref/init.groovy.d/seed.groovy:ro
+      - .:/var/jenkins_home/workspace/seed
