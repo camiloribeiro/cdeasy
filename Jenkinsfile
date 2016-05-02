@@ -1,13 +1,13 @@
 node {
-  stage 'First Stage'
+  stage 'Build'
     sh 'ls'
-    echo 'just an example'
+    echo 'Here should come some kind of build script'
 
-    stage 'Second 2'
-    node('master') {
-      sh 'pwd'
-    }
+  stage 'Integration Test'
+    sh 'pwd'
+    echo 'Here should come some kind of integration tests'
 
-  stage 'Third 2'
+  stage 'Deploy'
     sh 'ls -la'
+    echo 'Here should come some kind of deploy script'
 }
