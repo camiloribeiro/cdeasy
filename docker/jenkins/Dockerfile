@@ -1,11 +1,6 @@
-FROM jenkinsci/jenkins:2.0-alpha-3
+FROM jenkinsci/jenkins:2.0
 
 USER root
-
-COPY plugins.txt /usr/share/jenkins/plugins.txt
-RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
-
-COPY seed.groovy /usr/share/jenkins/ref/init.groovy.d/seed.groovy
 
 RUN apt-get update -qq && apt-get install -qqy \
     apt-transport-https \
@@ -23,7 +18,12 @@ RUN curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-com
 RUN chmod +x /usr/local/bin/docker-compose
 COPY start.sh /tmp/start.sh
 
+COPY plugins.txt /usr/share/jenkins/plugins.txt
 RUN dos2unix /usr/share/jenkins/plugins.txt
 RUN dos2unix /tmp/start.sh && chmod +x /tmp/start.sh
+
+RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
+
+COPY seed.groovy /usr/share/jenkins/ref/init.groovy.d/seed.groovy
 
 ENTRYPOINT ["/bin/bash", "-c", "/tmp/start.sh"]
