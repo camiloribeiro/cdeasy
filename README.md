@@ -83,27 +83,20 @@ For it you just need to run the folling commands:
       - docker-compose build jenkins 
       - docker-compose up
 
-From the version 2.0-alph-03 on, Jenkins requires to copy and past a jenkins token on start. 
-Check the output from the docker container and copy it. Example:
-
-```
-      - *************************************************************
-      - *************************************************************
-      - *************************************************************
-      -
-      - Jenkins initial setup is required. A security token is required to proceed.
-      - Please use the following security token to proceed to installation:
-      -
-      - >>>> theTokenShouldBeHere <<<<<
-      -
-      - *************************************************************
-      - *************************************************************
-      - *************************************************************
-```
-
 It is all set!
 
 Copy it and go to your local docker host port 8080 and past the token to start. Since we have installed all the plugins needed to run our pipelines, there is no need to install it in the first step. Just click in the upper right X to close without installing anything.
+
+Remember that now jenkins comes with admin account loged by default. Remember to save the hash provided before to use if you need to re logout/restart jenkins and come back later.
+
+The two pipelines
+-------------------------------------------
+
+After setting up the environment like shown before, you will run the seed job, just like any other job. 
+Please note that you can change the files as you please and rerun the seed job to see the effects, since all the files are shareded from your local to a docker container.
+
+The first pipeline will show up when executing the "unit_test" job and looking into the "Dummy Pipeline Example" view. This is the legacy pipeline (and still more flexible than the new one).
+The second pipeline (native for jenkins 2) will be shown when running the job "example_pipeline_jenkins2".
 
 Developing and Helping
 -----------------
@@ -114,9 +107,9 @@ If you change the code, you must run the tests locally and make sure it is all g
 
       - ./gradlew check
 
-Remember to replace the repo url to your forked repo in docker/jenkins/seed.groovy
+Remember to replace the repo url to your forked repo in the job example_pipeline_jenkins2 (dsl/pipeline/example_alpha_pipeline.groovy)
 
-Have fun!
+Have fun!!!
 
 LICENSE
 =======
