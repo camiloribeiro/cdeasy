@@ -26,8 +26,8 @@ By running this example you will be able to setup a jenkins instance with an exa
 Setting up the environment
 ===========================
 
-Before clonning this repository you you need docker, docker-compose and git in your machine. 
-If you want to try new stuff, than a IDE of your preference could be needed. In any case, it should be able to be edited using only VIM or any other favority text editor
+Before clonning this repository you you need docker, docker-compose (1.6.0+) and git in your machine. 
+If you want to try new stuff, than a IDE of your preference could be needed. In any case, it should be able to be edited using only VIM (like I do) or any other favority text editor
 
 OSX
 ----
@@ -38,7 +38,7 @@ If you are new to docker and you want to get some abstraction on the docker mach
 
 You will also need to install docker-compose:
 
-    - curl -L https://github.com/docker/compose/releases/download/1.4.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+    - curl -L https://github.com/docker/compose/releases/download/1.7.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
     - chmod +x /usr/local/bin/docker-compose 
 
 For more info please check: http://docs.docker.com/compose/install/
@@ -49,7 +49,7 @@ Please check the best way to install in your distribution on http://docs.docker.
 
 You will also need to install docker-compose:
 
-    - curl -L https://github.com/docker/compose/releases/download/1.4.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+    - curl -L https://github.com/docker/compose/releases/download/1.7.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
     - chmod +x /usr/local/bin/docker-compose 
 
 For more info please check: http://docs.docker.com/compose/install/ 
@@ -69,8 +69,6 @@ In this repo, in the blog post that will follow it and in the presentations ther
 Please consider using another operating system if you are not able to run the full experience at first, then please adapt it later to windows. 
 If you see any improvements that these instructions or scripts could have, please consider to pull request :) Credits will be fully given to you
 
-All the shell script used here will also not work in Windows. No Power shell will be provided in our first release :(
-
 Installing Jenkins, its plugins and seed job
 -------------------------------------------
 
@@ -85,9 +83,13 @@ For it you just need to run the folling commands:
 
 It is all set!
 
-Copy it and go to your local docker host port 8080 and past the token to start. Since we have installed all the plugins needed to run our pipelines, there is no need to install it in the first step. Just click in the upper right X to close without installing anything.
+Go to your local docker host port 8080 and past the token to start. Since we have installed all the plugins needed to run our pipelines, there is no need to install it in the first step. Just click in the upper right X to close without installing anything.
 
-Remember that now jenkins comes with admin account loged by default. Remember to save the hash provided before to use if you need to re logout/restart jenkins and come back later.
+Why is it so badly tested?
+-------------------------------------------
+
+I tryed not to test it as it should be tested to avoid increasing the complexity to people recently exposed to jenkins and job-dsl.
+I am thinking in a nice way to show how to test the pipeline in modules without scaring non tdders or making people think that it is overcomplicated.
 
 The two pipelines
 -------------------------------------------
@@ -107,14 +109,14 @@ If you change the code, you must run the tests locally and make sure it is all g
 
       - ./gradlew check
 
-Remember to replace the repo url to your forked repo in the job example_pipeline_jenkins2 (dsl/pipeline/example_alpha_pipeline.groovy)
+Remember to replace the repo url to your forked repo in the job example_pipeline_jenkins2 (dsl/pipeline/example_alpha_pipeline.groovy), only needed if you want to fork and tryout your own implementation.
 
 Have fun!!!
 
 LICENSE
 =======
 
-Copyright 2015 - Camilo Ribeiro camilo@camiloribeiro.com
+Copyright 2015 - 2016 Camilo Ribeiro camilo@camiloribeiro.com
 
 This file is part of CDEASY.
 
