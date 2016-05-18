@@ -1,4 +1,4 @@
-FROM jenkinsci/jenkins:2.2
+FROM jenkinsci/jenkins:2.4
 
 USER root
 
@@ -14,7 +14,7 @@ RUN apt-get update -qq && apt-get install -qqy \
 RUN wget -qO- https://get.docker.com/ | sh
 RUN touch /var/run/docker.sock
 
-RUN curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+RUN curl -L https://github.com/docker/compose/releases/download/1.7.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 RUN chmod +x /usr/local/bin/docker-compose
 COPY start.sh /tmp/start.sh
 
