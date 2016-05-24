@@ -22,6 +22,10 @@ About CDeasy
 Here you will find a set of groovy scripts that use job-dsl plugin for jenkins (https://jenkinsci.github.io/job-dsl-plugin), jenkins itself (https://github.com/jenkinsci/jenkins), groovy and spock for testing (https://github.com/spockframework/spock)
 
 By running this example you will be able to setup a jenkins instance with an example of continuous delivey pipeline in your local computer, all instanciated by one simple click ;)
+
+The pipeline you will see is:
+
+![Delivery pipeline example](pipeline.png)
    
 Setting up the environment
 ===========================
