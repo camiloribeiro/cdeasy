@@ -1,4 +1,4 @@
-FROM jenkinsci/jenkins:2.4
+FROM jenkinsci/jenkins:2.8
 
 USER root
 
@@ -25,7 +25,5 @@ RUN dos2unix /tmp/start.sh && chmod +x /tmp/start.sh
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
 
 COPY seed.groovy /usr/share/jenkins/ref/init.groovy.d/seed.groovy
-
-ADD http://updates.jenkins-ci.org/download/war/2.6/jenkins.war /usr/share/jenkins/jenkins.war
 
 ENTRYPOINT ["/bin/bash", "-c", "/tmp/start.sh"]
