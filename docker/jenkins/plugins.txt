@@ -66,6 +66,7 @@ structs 1.2
 subversion 2.6
 timestamper 1.8.4
 token-macro 1.12.1
+variant 1.0
 view-job-filters 1.27
 workflow-aggregator 2.2
 workflow-api 2.1

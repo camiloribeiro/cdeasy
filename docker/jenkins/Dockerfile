@@ -22,6 +22,15 @@ COPY plugins.txt /usr/share/jenkins/plugins.txt
 RUN dos2unix /usr/share/jenkins/plugins.txt
 RUN dos2unix /tmp/start.sh && chmod +x /tmp/start.sh
 
+RUN mkdir /usr/share/jenkins/ref/plugins
+RUN wget http://updates.jenkins-ci.org/download/plugins/blueocean-commons/1.0-alpha-3/blueocean-commons.hpi -O /usr/share/jenkins/ref/plugins/blueocean-commons.hpi
+RUN wget http://updates.jenkins-ci.org/download/plugins/blueocean-dashboard/1.0-alpha-3/blueocean-dashboard.hpi -O /usr/share/jenkins/ref/plugins/blueocean-dashboard.hpi
+RUN wget http://updates.jenkins-ci.org/download/plugins/blueocean-events/1.0-alpha-3/blueocean-events.hpi -O /usr/share/jenkins/ref/plugins/blueocean-events.hpi
+RUN wget http://updates.jenkins-ci.org/download/plugins/blueocean-personalization/1.0-alpha-3/blueocean-personalization.hpi -O /usr/share/jenkins/ref/plugins/blueocean-personalization.hpi
+RUN wget http://updates.jenkins-ci.org/download/plugins/blueocean-rest/1.0-alpha-3/blueocean-rest.hpi -O /usr/share/jenkins/ref/plugins/blueocean-restapi.hpi
+RUN wget http://updates.jenkins-ci.org/download/plugins/blueocean-rest-impl/1.0-alpha-3/blueocean-rest-impl.hpi -O /usr/share/jenkins/ref/plugins/blueocean-restimpl.hpi
+RUN wget http://updates.jenkins-ci.org/download/plugins/blueocean-web/1.0-alpha-3/blueocean-web.hpi -O /usr/share/jenkins/ref/plugins/blueocean-web.hpi
+RUN wget http://updates.jenkins-ci.org/download/plugins/blueocean/1.0-alpha-3/blueocean.hpi -O /usr/share/jenkins/ref/plugins/blueocean.hpi
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
 
 COPY seed.groovy /usr/share/jenkins/ref/init.groovy.d/seed.groovy
