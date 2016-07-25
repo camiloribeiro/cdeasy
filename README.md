@@ -93,7 +93,7 @@ Alpha support to blueocean
 -----------------
 
 Now this example has also support to the alpha version of blueocean, the new jenkins gui. It is very basic and it is only supported by the example_pieline_jenkins2 job.
-Keep in mind you still have to run the seed job before anything else. A variant feature will appear in the top of your jenkins, if you click there (or add /blue after the jenkins url) you will engage in blueocean alpha experience. Be aware it is an alpha release and it is still very young, so don't be too judgmental :) I will keep it up to data, so star or follow the repo to try the new versions.
+Keep in mind you still have to run the seed job before anything else. A variant feature will appear in the top of your jenkins (Try Blue Ocean UI ...), if you click there (or add /blue after the jenkins url) you will engage in blueocean alpha experience. Be aware it is an alpha release and it is still very young, so don't be too judgmental :) I will keep it up to data, so star or follow the repo to try the new versions.
 
 Why is it so badly tested?
 -------------------------------------------
