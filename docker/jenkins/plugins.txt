@@ -29,7 +29,7 @@ htmlpublisher 1.11
 icon-shim 2.0.3 
 ivy 1.26
 javadoc 1.4
-job-dsl 1.47
+job-dsl 1.50
 jobConfigHistory 2.15
 join 1.21
 jquery 1.11.2-0
