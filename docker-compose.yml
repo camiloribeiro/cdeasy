@@ -9,4 +9,4 @@ services:
     privileged: true
     volumes:
       - ./docker/jenkins/seed.groovy:/usr/share/jenkins/ref/init.groovy.d/seed.groovy:ro
-      - .:/var/jenkins_home/workspace/seed
+      - .:/var/jenkins_home/workspace/seed:ro
