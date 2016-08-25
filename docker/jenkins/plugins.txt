@@ -84,4 +84,4 @@ metrics 3.1.2.9
 favorite 1.16
 workflow-support 2.2
 support-core 2.32
-bouncycastle-api 2.16 
+bouncycastle-api 2.16.0
