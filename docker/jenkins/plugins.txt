@@ -71,7 +71,7 @@ view-job-filters 1.27
 workflow-aggregator 2.2
 workflow-api 2.1
 workflow-basic-steps 2.1
-workflow-cps 2.12
+workflow-cps 2.13
 workflow-cps-global-lib 2.2
 workflow-durable-task-step 2.4
 workflow-job 2.5
