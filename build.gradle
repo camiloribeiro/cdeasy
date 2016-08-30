@@ -20,7 +20,7 @@ repositories {
 }
 
 dependencies {
-  compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.1'
-  compile group: 'org.jenkins-ci.plugins', name: 'job-dsl-core', version: '1.39'
+  compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.7'
+  compile group: 'org.jenkins-ci.plugins', name: 'job-dsl-core', version: '1.50'
   testCompile group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'
 }
