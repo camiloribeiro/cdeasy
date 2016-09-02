@@ -1,4 +1,4 @@
-workflowJob('example_pipeline_jenkins2') {
+pipelineJob('example_pipeline_jenkins2') {
   definition {
     cpsScm {
       scm {
