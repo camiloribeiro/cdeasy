@@ -73,7 +73,7 @@ In this repo, in the blog post that will follow it and in the presentations ther
 Please consider using another operating system if you are not able to run the full experience at first, then please adapt it later to windows. 
 If you see any improvements that these instructions or scripts could have, please consider to pull request :) Credits will be fully given to you
 
-Installing Jenkins, its plugins and seed job
+Installing Jenkins, its plugins and seed job the fun way
 -------------------------------------------
 
 Please note that you will need a fast internet connection and you will need to allocate at least 2 GB RAM to your boot2docker machine. More memory, faster results ;)
@@ -84,6 +84,21 @@ For it you just need to run the folling commands:
       - cd cdeasy
       - docker-compose build jenkins 
       - docker-compose up
+
+It is all set!
+
+Go to your local docker host port 8080 and past the token to start. Since we have installed all the plugins needed to run our pipelines, there is no need to install it in the first step. Just click in the upper right X to close without installing anything.
+
+Installing Jenkins, its plugins and seed job the fast way
+-------------------------------------------
+
+Same preconditions as before.
+
+For it you just need to run the folling commands:
+
+      - git clone https://github.com/camiloribeiro/cdeasy.git
+      - cd cdeasy
+      - docker run -it -p 8080:8080 -v $PWD/docker/jenkins/seed.groovy:/usr/share/jenkins/ref/init.groovy.d/seed.groovy:ro -v $PWD:/var/jenkins_home/workspace/seed:ro camiloribeiro/cdeasy:latest
 
 It is all set!
 
