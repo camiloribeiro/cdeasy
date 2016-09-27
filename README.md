@@ -21,7 +21,7 @@ About CDeasy
  
 Here you will find a set of groovy scripts that use job-dsl plugin for jenkins (https://jenkinsci.github.io/job-dsl-plugin), jenkins itself (https://github.com/jenkinsci/jenkins), groovy and spock for testing (https://github.com/spockframework/spock)
 
-By running this example you will be able to setup a jenkins instance with an example of continuous delivey pipeline in your local computer, all instanciated by one simple click ;)
+By running this example you will be able to setup a jenkins instance with an example of continuous delivery pipeline in your local computer, all instantiated by one simple click ;)
 
 The pipeline you will see is:
 
@@ -36,13 +36,13 @@ To do that, run the seed job, then go to "Try Blue Ocean UI" in the top of the p
 Setting up the environment
 ===========================
 
-Before clonning this repository you you need docker, docker-compose (1.6.0+) and git in your machine. 
-If you want to try new stuff, than a IDE of your preference could be needed. In any case, it should be able to be edited using only VIM (like I do) or any other favority text editor
+Before cloning this repository you you need docker, docker-compose (1.6.0+) and git in your machine. 
+If you want to try new stuff, than a IDE of your preference could be needed. In any case, it should be able to be edited using only VIM (like I do) or any other favorite text editor
 
 OSX
 ----
  
-If you are new to docker and you want to get some abstraction on the docker machine, please install boot2docker:
+If you are new to docker and you want to get some abstraction on the docker machine, please install docker for mac:
 
     - https://docs.docker.com/installation/mac/
 
@@ -70,7 +70,7 @@ This is the link to install boot2docker on Windows.
 
     - https://docs.docker.com/installation/windows/
 
-You will also need to use docker-compose here, but I don't know a simple way to do that :( try googling or check this stackoverflow thread:
+You will also need to use docker-compose here, but I don't know a simple way to do that :( try to google or check this stackoverflow thread:
 
     - http://stackoverflow.com/questions/29289785/how-to-install-docker-compose-on-windows
 
@@ -79,12 +79,12 @@ In this repo, in the blog post that will follow it and in the presentations ther
 Please consider using another operating system if you are not able to run the full experience at first, then please adapt it later to windows. 
 If you see any improvements that these instructions or scripts could have, please consider to pull request :) Credits will be fully given to you
 
-Installing Jenkins, its plugins and seed job the fun way
+Installing Jenkins, its plug-ins and seed job the fun way
 -------------------------------------------
 
-Please note that you will need a fast internet connection and you will need to allocate at least 2 GB RAM to your boot2docker machine. More memory, faster results ;)
+Please note that you will need a fast internet connection and you will need to allocate at least 2 GB RAM to your docker machine. More memory, faster results ;)
 
-For it you just need to run the folling commands:
+For it you just need to run the following commands:
 
       - git clone https://github.com/camiloribeiro/cdeasy.git
       - cd cdeasy
@@ -93,14 +93,14 @@ For it you just need to run the folling commands:
 
 It is all set!
 
-Go to your local docker host port 8080 and past the token to start. Since we have installed all the plugins needed to run our pipelines, there is no need to install it in the first step. Just click in the upper right X to close without installing anything.
+Go to your local docker host port 8080 and past the token to start. Since we have installed all the plug-ins needed to run our pipelines, there is no need to install it in the first step. Just click in the upper right X to close without installing anything.
 
-Installing Jenkins, its plugins and seed job the fast way
+Installing Jenkins, its plug-ins and seed job the fast way
 -------------------------------------------
 
 Same preconditions as before.
 
-For it you just need to run the folling commands:
+For it you just need to run the following commands:
 
       - git clone https://github.com/camiloribeiro/cdeasy.git
       - cd cdeasy
@@ -108,25 +108,25 @@ For it you just need to run the folling commands:
 
 It is all set!
 
-Go to your local docker host port 8080 and past the token to start. Since we have installed all the plugins needed to run our pipelines, there is no need to install it in the first step. Just click in the upper right X to close without installing anything.
+Go to your local docker host port 8080 and past the token to start. Since we have installed all the plug-ins needed to run our pipelines, there is no need to install it in the first step. Just click in the upper right X to close without installing anything.
 
-Beta support to blueocean
+Beta support to blue ocean
 -----------------
 
-Now this example has also support to the beta version of blueocean, the new jenkins gui. It is very basic and it is only supported by the example_pieline_jenkins2 job.
-Keep in mind you still have to run the seed job before anything else. A variant feature will appear in the top of your jenkins (Try Blue Ocean UI ...), if you click there (or add /blue after the jenkins url) you will engage in blueocean beta experience. Be aware it is an beta release and it is still very young, so don't be too judgmental :) I will keep it up to data, so star or follow the repo to try the new versions.
+Now this example has also support to the beta version of blue ocean, the new jenkins gui. It is very basic and it is only supported by the example_pieline_jenkins2 job.
+Keep in mind you still have to run the seed job before anything else. A variant feature will appear in the top of your jenkins (Try Blue Ocean UI ...), if you click there (or add /blue after the jenkins url) you will engage in blue ocean beta experience. Be aware it is an beta release and it is still very young, so don't be too judgmental :) I will keep it up to data, so star or follow the repo to try the new versions.
 
 Why is it so badly tested?
 -------------------------------------------
 
-I tryed not to test it as it should be tested to avoid increasing the complexity to people recently exposed to jenkins and job-dsl.
-I am thinking in a nice way to show how to test the pipeline in modules without scaring non tdders or making people think that it is overcomplicated.
+I tried not to test it as it should be tested to avoid increasing the complexity to people recently exposed to jenkins and job-dsl.
+I am thinking in a nice way to show how to test the pipeline in modules without scaring non tdd'ers or making people think that it is overcomplicated.
 
 The two pipelines
 -------------------------------------------
 
 After setting up the environment like shown before, you will run the seed job, just like any other job. 
-Please note that you can change the files as you please and rerun the seed job to see the effects, since all the files are shareded from your local to a docker container.
+Please note that you can change the files as you please and rerun the seed job to see the effects, since all the files are shared from your local to a docker container.
 
 The first pipeline will show up when executing the "unit_test" job and looking into the "Dummy Pipeline Example" view. This is the legacy pipeline (and still more flexible than the new one).
 The second pipeline (native for jenkins 2) will be shown when running the job "example_pipeline_jenkins2".
