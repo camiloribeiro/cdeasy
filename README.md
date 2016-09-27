@@ -30,6 +30,8 @@ The pipeline you will see is:
 You will also see the following example of the new blueocean pipeline:
 
 ![Native Jenkins 2 Pipeline with Blueocean example](pipeline2.png)
+
+To do that, run the seed job, then go to "Try Blue Ocean UI" in the top of the page and run the job "example_pipeline_jenkins2"
    
 Setting up the environment
 ===========================
