@@ -26,6 +26,10 @@ By running this example you will be able to setup a jenkins instance with an exa
 The pipeline you will see is:
 
 ![Delivery pipeline example](pipeline.png)
+
+You will also see the following example of the new blueocean pipeline:
+
+![Native Jenkins 2 Pipeline with Blueocean example](pipeline2.png)
    
 Setting up the environment
 ===========================
