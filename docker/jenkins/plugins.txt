@@ -96,7 +96,7 @@ ssh-slaves 1.11
 structs 1.5
 subversion 2.6
 support-core 2.33
-timestamper 1.8.6
+timestamper 1.8.7
 token-macro 2.0
 variant 1.0
 view-job-filters 1.27
