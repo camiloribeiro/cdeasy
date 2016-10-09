@@ -29,9 +29,9 @@ credentials-binding 1.9
 dashboard-view 2.9.10
 delivery-pipeline-plugin 0.9.12
 display-url-api 0.5
-docker-commons 1.4.1
+docker-commons 1.5
 docker-plugin 0.16.2
-docker-workflow 1.8
+docker-workflow 1.9
 durable-task 1.12
 ec2 1.36
 envinject 1.93.1
@@ -76,7 +76,7 @@ parameterized-trigger 2.32
 pipeline-build-step 2.3
 pipeline-graph-analysis 1.2
 pipeline-input-step 2.1
-pipeline-milestone-step 1.0
+pipeline-milestone-step 1.1
 pipeline-model-definition 0.2
 pipeline-rest-api 2.1
 pipeline-stage-step 2.2
@@ -104,7 +104,7 @@ workflow-aggregator 2.4
 workflow-api 2.4
 workflow-basic-steps 2.2
 workflow-cps 2.18
-workflow-cps-global-lib 2.3
+workflow-cps-global-lib 2.4
 workflow-durable-task-step 2.5
 workflow-job 2.7
 workflow-multibranch 2.9
