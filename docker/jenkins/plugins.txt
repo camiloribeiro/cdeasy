@@ -24,7 +24,7 @@ build-pipeline-plugin 1.5.4
 cloudbees-folder 5.13
 conditional-buildstep 1.3.5
 config-file-provider 2.13
-credentials 2.1.5
+credentials 2.1.6
 credentials-binding 1.9
 dashboard-view 2.9.10
 delivery-pipeline-plugin 0.9.12
@@ -77,7 +77,7 @@ pipeline-build-step 2.3
 pipeline-graph-analysis 1.2
 pipeline-input-step 2.1
 pipeline-milestone-step 1.1
-pipeline-model-definition 0.2
+pipeline-model-definition 0.4
 pipeline-rest-api 2.1
 pipeline-stage-step 2.2
 pipeline-stage-view 2.1
