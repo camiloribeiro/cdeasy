@@ -54,7 +54,7 @@ ivy 1.26
 jackson2-api 2.7.3
 jackson2-api 2.7.3
 javadoc 1.4
-job-dsl 1.51
+job-dsl 1.52
 jobConfigHistory 2.15
 join 1.21
 jquery 1.11.2-0
