@@ -103,11 +103,11 @@ view-job-filters 1.27
 workflow-aggregator 2.4
 workflow-api 2.5
 workflow-basic-steps 2.2
-workflow-cps 2.19
+workflow-cps 2.20
 workflow-cps-global-lib 2.4
 workflow-durable-task-step 2.5
 workflow-job 2.7
 workflow-multibranch 2.9
 workflow-scm-step 2.2
 workflow-step-api 2.4
-workflow-support 2.9
+workflow-support 2.10
