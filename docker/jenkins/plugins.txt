@@ -47,7 +47,7 @@ github-sqs-plugin 1.5
 google-login 1.2.1
 greenballs 1.15
 handlebars 1.1.1
-hipchat 1.0.0
+hipchat 2.0.0
 htmlpublisher 1.11
 icon-shim 2.0.3 
 ivy 1.26
