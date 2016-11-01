@@ -10,6 +10,7 @@ blueocean 1.0.0-b11
 blueocean-commons 1.0.0-b11
 blueocean-config 1.0.0-b11
 blueocean-dashboard 1.0.0-b11
+blueocean-display-url 1.2
 blueocean-events 1.0.0-b11
 blueocean-jwt 1.0.0-b11
 blueocean-personalization 1.0.0-b11
