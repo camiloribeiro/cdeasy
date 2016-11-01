@@ -52,7 +52,6 @@ htmlpublisher 1.11
 icon-shim 2.0.3 
 ivy 1.26
 jackson2-api 2.7.3
-jackson2-api 2.7.3
 javadoc 1.4
 job-dsl 1.52
 jobConfigHistory 2.15
@@ -109,5 +108,5 @@ workflow-durable-task-step 2.5
 workflow-job 2.8
 workflow-multibranch 2.9
 workflow-scm-step 2.2
-workflow-step-api 2.4
+workflow-step-api 2.5
 workflow-support 2.10
