@@ -1,6 +1,6 @@
 ace-editor 1.1
-analysis-core 1.79
-ansicolor 0.4.2
+analysis-core 1.80
+ansicolor 0.4.3
 ant 1.4
 artifactory 2.8.1
 async-http-client 1.7.24.1
@@ -42,7 +42,7 @@ envinject 1.93.1
 favorite 2.0.2
 flexible-publish 0.15.2 
 ghprb 1.33.1
-git 3.0.0
+git 3.0.1
 git-client 2.1.0
 git-server 1.7
 github 1.23.1
