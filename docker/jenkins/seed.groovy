@@ -7,13 +7,13 @@ project = Jenkins.instance.createProject(FreeStyleProject, "seed")
 
 project.getBuildersList().clear()
 
-project.getBuildersList().add(new ExecuteDslScripts(
-  new ExecuteDslScripts.ScriptLocation("false","dsl/**/*.groovy",null),
-  false,
-  RemovedJobAction.DELETE,
-  RemovedViewAction.DELETE,
-  LookupStrategy.JENKINS_ROOT,
-  "src/main/groovy")
-);
+executeDslScripts = new ExecuteDslScripts()
+executeDslScripts.setTargets("dsl/**/*.groovy")
+executeDslScripts.setRemovedJobAction(RemovedJobAction.DELETE)
+executeDslScripts.setRemovedViewAction(RemovedViewAction.DELETE)
+executeDslScripts.setLookupStrategy(LookupStrategy.JENKINS_ROOT)
+executeDslScripts.setAdditionalClasspath("src/main/groovy")
+
+project.getBuildersList().add(executeDslScripts)
 
 project.save()
