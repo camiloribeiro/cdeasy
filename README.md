@@ -18,6 +18,9 @@ CDeasy - Continuous Delivery made easy
 
 About CDeasy
 -----------------
+
+This project adheres to the Contributor Covenant [code of conduct](CODE_OF_CONDUCT.md).
+By participating, you are expected to uphold this code.
  
 Here you will find a set of groovy scripts that use job-dsl plugin for jenkins (https://jenkinsci.github.io/job-dsl-plugin), jenkins itself (https://github.com/jenkinsci/jenkins), groovy and spock for testing (https://github.com/spockframework/spock)
 
