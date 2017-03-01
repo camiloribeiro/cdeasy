@@ -46,10 +46,10 @@ favorite 2.0.4
 flexible-publish 0.15.2 
 ghprb 1.35.0
 git 3.0.5
-git-client 2.2.1
+git-client 2.3.0
 git-server 1.7
 github 1.26.1
-github-api 1.84
+github-api 1.85
 github-branch-source 2.0.3
 github-organization-folder 1.6
 github-sqs-plugin 1.5
@@ -102,7 +102,7 @@ pubsub-light 1.7
 rebuild 1.25
 run-condition 1.0
 scm-api 2.0.7
-script-security 1.26
+script-security 1.27
 sectioned-view 1.20
 sse-gateway 1.15
 ssh-agent 1.14
@@ -123,6 +123,6 @@ workflow-cps-global-lib 2.6
 workflow-durable-task-step 2.9
 workflow-job 2.10
 workflow-multibranch 2.12
-workflow-scm-step 2.3
+workflow-scm-step 2.4
 workflow-step-api 2.9
 workflow-support 2.13
