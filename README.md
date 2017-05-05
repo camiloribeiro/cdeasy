@@ -113,11 +113,11 @@ It is all set!
 
 Go to your local docker host port 8080 and past the token to start. Since we have installed all the plug-ins needed to run our pipelines, there is no need to install it in the first step. Just click in the upper right X to close without installing anything.
 
-Beta support to blue ocean
+Support to blue ocean
 -----------------
 
-Now this example has also support to the beta version of blue ocean, the new jenkins gui. It is very basic and it is only supported by the example_pieline_jenkins2 job.
-Keep in mind you still have to run the seed job before anything else. A variant feature will appear in the top of your jenkins (Try Blue Ocean UI ...), if you click there (or add /blue after the jenkins url) you will engage in blue ocean beta experience. Be aware it is an beta release and it is still very young, so don't be too judgmental :) I will keep it up to data, so star or follow the repo to try the new versions.
+Now this example has also support to the blue ocean, the new jenkins gui. It is very basic and it is only supported by the example_pieline_jenkins2 job.
+Keep in mind you still have to run the seed job before anything else. A variant feature will appear in the top of your jenkins (Try Blue Ocean UI ...), if you click there (or add /blue after the jenkins url) you will engage in blue ocean experience. I will keep it up to data, so star or follow the repo to try the new versions.
 
 Why is it so badly tested?
 -------------------------------------------
